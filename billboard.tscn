@@ -8,7 +8,7 @@
 size = Vector2(215, 205.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j7h4d"]
-radius = 239.18
+radius = 161.16
 
 [node name="billboard" type="Area2D"]
 position = Vector2(-1437, -491)
