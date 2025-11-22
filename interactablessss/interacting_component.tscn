@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://confhjrouux3o"]
+
+[ext_resource type="Script" uid="uid://bwpmegxanh4uv" path="res://interactablessss/interacting_component.gd" id="1_7e3br"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwouj"]
+
+[node name="interacting component" type="Node2D"]
+script = ExtResource("1_7e3br")
+
+[node name="interact range" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interact range"]
+shape = SubResource("RectangleShape2D_xwouj")
+
+[node name="interact_label" type="Label" parent="interact range"]
+z_index = 10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.5
+offset_top = -60.0
+offset_right = 47.5
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 44
+text = "e to interact"
+
+[connection signal="area_entered" from="interact range" to="." method="_on_interact_range_area_entered"]
+[connection signal="area_exited" from="interact range" to="." method="_on_interact_range_area_exited"]

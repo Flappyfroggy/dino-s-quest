@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://djav70gn6bv7j"]
+
+[ext_resource type="Texture2D" uid="uid://c60lgxh0n7l7s" path="res://assets/task board.png" id="1_q8io0"]
+[ext_resource type="Script" uid="uid://kngxujca4vxt" path="res://billboard.gd" id="1_t58go"]
+[ext_resource type="PackedScene" uid="uid://dihbw88h6l4nj" path="res://interactablessss/interactables.tscn" id="2_t58go"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7xxo"]
+size = Vector2(215, 205.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j7h4d"]
+radius = 239.18
+
+[node name="billboard" type="Area2D"]
+position = Vector2(-1437, -491)
+script = ExtResource("1_t58go")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1453.0001, 456.00003)
+scale = Vector2(1.0626404, 0.97721785)
+texture = ExtResource("1_q8io0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1464, 466.25)
+shape = SubResource("RectangleShape2D_g7xxo")
+
+[node name="interactables" parent="." instance=ExtResource("2_t58go")]
+position = Vector2(1465, 456)
+interact_name = "billboard"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactables"]
+shape = SubResource("CircleShape2D_j7h4d")

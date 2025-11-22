@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://8ap34hq5bbv4"]
+[gd_scene load_steps=5 format=3 uid="uid://8ap34hq5bbv4"]
 
 [ext_resource type="Script" uid="uid://cgvp0cqejsslv" path="res://character_body_2d.gd" id="1_ij6vw"]
 [ext_resource type="Texture2D" uid="uid://byy08qfymv5pl" path="res://assets/dino.PNG" id="2_ghijl"]
+[ext_resource type="PackedScene" uid="uid://confhjrouux3o" path="res://interactablessss/interacting_component.tscn" id="3_ghijl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44cfe"]
 size = Vector2(109, 114)
@@ -19,4 +20,10 @@ scale = Vector2(0.24249999, 0.252)
 texture = ExtResource("2_ghijl")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -3292
+limit_top = -5
+limit_right = 3677
 limit_bottom = 662
+
+[node name="interacting component" parent="." instance=ExtResource("3_ghijl")]
+position = Vector2(4, -89)
