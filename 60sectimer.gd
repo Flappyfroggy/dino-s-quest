@@ -5,6 +5,6 @@ func _ready():
 func _process(_delta):
 	var timeleft = self.time_left
 	var timelefto = str(round(timeleft))
-	timerlabel.text = "You have " + timelefto + " seconds"
+	timerlabel.text = "You have " + timelefto + " seconds and a score of " + e.game1score
 func _on_timer_timeout():
 	print ("timer done")
