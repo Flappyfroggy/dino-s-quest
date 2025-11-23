@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://b3wk32mmk2drg"]
+[gd_scene load_steps=3 format=3 uid="uid://b3wk32mmk2drg"]
+
+[ext_resource type="Script" uid="uid://dp5wj3bdf3sbc" path="res://exitbutton.gd" id="1_csjm6"]
+[ext_resource type="Script" uid="uid://cq386v21t8l0v" path="res://acceptquest1.gd" id="1_jmcgm"]
 
 [node name="QuestUI" type="Control"]
 layout_mode = 3
@@ -45,11 +48,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 text = "Accept Quest"
+script = ExtResource("1_jmcgm")
 
 [node name="exitbutton" type="Button" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Exit"
+script = ExtResource("1_csjm6")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 5
@@ -69,5 +74,5 @@ text = "Request: Help the mayor!"
 [node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-text = "Help! the tyrant ruler has threatened to take down everything in this village to build a new industrial plant if we don't rebuild quickly! Please, help me clear away atleast 10 pieces of debris before he arrives."
+text = "Help! the tyrant ruler has threatened to take down everything in this village to build a new industrial plant if we don't rebuild quickly! Please, help me clear away pieces of debris before he arrives."
 autowrap_mode = 2

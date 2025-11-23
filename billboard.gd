@@ -17,3 +17,4 @@ func _on_interact():
 func _process(_delta):
 	if e.n:
 		canvaslayer.hide()
+		e.n = false
