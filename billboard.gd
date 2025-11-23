@@ -1,13 +1,19 @@
 extends Area2D
-@onready var questui1 = preload("res://billboard_ui.tscn")
+@onready var questui1 = preload("res://actual_billboard_ui.tscn")
 @onready var interactable: Area2D = $interactables
 var questui
-func _ready() -> void:
+var canvaslayer
+func _ready():
 	interactable.interact = _on_interact
 	questui = questui1.instantiate()
 	add_child(questui)
-	questui.hide()
-	questui.visible = false
+	canvaslayer = questui.get_node("CanvasLayer")
+	canvaslayer.hide()
+	
 
 func _on_interact():
-	questui.show()
+	canvaslayer.show()
+	
+func _process(_delta):
+	if e.n:
+		canvaslayer.hide()
