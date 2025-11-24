@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdms3l6vcjmvr"]
+
+[ext_resource type="Script" uid="uid://diitqlnkih837" path="res://wood_log.gd" id="1_5uxu6"]
+[ext_resource type="Texture2D" uid="uid://c0b41av18y85i" path="res://assets/bricks.png" id="2_b0tuo"]
+[ext_resource type="PackedScene" uid="uid://dihbw88h6l4nj" path="res://interactablessss/interactables.tscn" id="3_2qg5s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n0me3"]
+radius = 88.005684
+
+[node name="bricks" type="Area2D"]
+script = ExtResource("1_5uxu6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.75, 5.875007)
+scale = Vector2(0.50163394, 0.46732527)
+texture = ExtResource("2_b0tuo")
+
+[node name="interactables" parent="." instance=ExtResource("3_2qg5s")]
+interact_name = "bricks"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactables"]
+position = Vector2(-2, 6)
+shape = SubResource("CircleShape2D_n0me3")

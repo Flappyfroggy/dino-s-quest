@@ -1,33 +1,65 @@
-[gd_scene load_steps=6 format=4 uid="uid://bcpqdsybh0pc2"]
+[gd_scene load_steps=10 format=4 uid="uid://bcpqdsybh0pc2"]
 
 [ext_resource type="Texture2D" uid="uid://bnvr0cum5rl6f" path="res://assets/background-sky.jpeg" id="1_0hvi2"]
 [ext_resource type="TileSet" uid="uid://mwd8sjp2ns30" path="res://villagetileset.tres" id="2_r6gmb"]
 [ext_resource type="PackedScene" uid="uid://8ap34hq5bbv4" path="res://character_body_2d.tscn" id="3_wh6qq"]
 [ext_resource type="Script" uid="uid://becrycwbkbxwu" path="res://60sectimer.gd" id="4_r6gmb"]
 [ext_resource type="PackedScene" uid="uid://ckvuf4pkp0g0o" path="res://wood_log.tscn" id="5_wh6qq"]
+[ext_resource type="PackedScene" uid="uid://ckufcdsvgdamv" path="res://tree_interact.tscn" id="6_or1ld"]
+[ext_resource type="PackedScene" uid="uid://cdms3l6vcjmvr" path="res://bricks.tscn" id="7_vlki2"]
+[ext_resource type="PackedScene" uid="uid://bgacmhphasny1" path="res://tree.tscn" id="8_ighjx"]
+[ext_resource type="PackedScene" uid="uid://i0xcymmn28nm" path="res://log.tscn" id="9_261h4"]
 
 [node name="minigame1" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(543.00024, 357)
-scale = Vector2(0.44175982, -0.30546626)
+position = Vector2(543.00024, 306.50003)
+scale = Vector2(0.44175982, -0.5004019)
 texture = ExtResource("1_0hvi2")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAATACYAAgADAEUAAAAZACUAAgADAEUAAAD+/yIAAgADAEUAAAD4/yIAAgADAEUAAAA0ACQAAgADAEUAAAA5ACYAAgADAEUAAADQ/yUAAgADAEUAAADM/yMAAgADAEUAAADh/yIAAgADAEUAAAD4/yYAAgADAGUAAAD+/yYAAgADAGUAAAD+/ygAAgADAGUAAAAEACUAAgADAGUAAADn/yMAAgADAGUAAADn/yUAAgADAGUAAADW/xMAAgADAGUAAADZ/xcAAgADAGUAAADW/xUAAgADAGUAAAAjABcAAgADAGUAAAAgABoAAgADAGUAAAAgABwAAgADAGUAAAAkABgAAgADAGUAAAAiABgAAgADAGUAAAAeABwAAgADAGUAAABJABwAAgADAGUAAABJAB4AAgADAGUAAABNAB0AAgADAGUAAABNABsAAgADAGUAAADs/w8AAgADAGUAAADs/xEAAgADAGUAAADp/xAAAgADAGUAAADs/w4AAgADAEUAAADx/w0AAgADAEUAAAAzAA0AAgADAEUAAAA4AA0AAgADAEUAAAAvABAAAgADAGUAAAAyAA8AAgADAGUAAAAvACUAAgADAGUAAAAsACUAAgADAGUAAAAxACgAAgADAGUAAAAxACcAAgADAGUAAABYAAIAAgADAGUAAABVAAcAAgADAGUAAABMAAgAAgADAGUAAABRAAgAAgADAGUAAABSAAcAAgADAGUAAABqACgAAgADAGUAAABhACcAAgADAGUAAABmABgAAgADAGUAAABsABgAAgADAGUAAABrABYAAgADAGUAAABqABQAAgADAEUAAABmACYAAgADAEUAAABqACUAAgADAEUAAAB+AB4AAgADAEUAAAB6AB4AAgADAEUAAAB/ABsAAgADAEUAAAC9/woAAgADAEUAAAC7/wwAAgADAEUAAACz/wwAAgADAEUAAAC3/wwAAgADAEUAAAC3/w4AAgADAEUAAACo/x0AAgADAEUAAACs/yIAAgADAEUAAACy/yMAAgADAEUAAACm/x4AAgADAGUAAACf/w8AAgADAGUAAACh/w4AAgADAGUAAACh/w8AAgADAGUAAACi/xQAAgADAGUAAACi/xAAAgADAGUAAACg/xEAAgADAGUAAACk/xQAAgADAGUAAADK/woAAgADAGUAAAAQAAsAAgADAGUAAAASAAwAAgADAGUAAAAiAAUAAgADAGUAAAA=")
+tile_map_data = PackedByteArray("AAATACYAAgADAEUAAAAZACUAAgADAEUAAAD+/yIAAgADAEUAAAD4/yIAAgADAEUAAAA0ACQAAgADAEUAAAA5ACYAAgADAEUAAADQ/yUAAgADAEUAAADM/yMAAgADAEUAAADh/yIAAgADAEUAAAD4/yYAAgADAGUAAAD+/yYAAgADAGUAAAD+/ygAAgADAGUAAAAEACUAAgADAGUAAADn/yMAAgADAGUAAADn/yUAAgADAGUAAADW/xMAAgADAGUAAADZ/xcAAgADAGUAAADW/xUAAgADAGUAAAAjABcAAgADAGUAAAAgABoAAgADAGUAAAAgABwAAgADAGUAAAAkABgAAgADAGUAAAAiABgAAgADAGUAAAAeABwAAgADAGUAAABJABwAAgADAGUAAABJAB4AAgADAGUAAABNAB0AAgADAGUAAABNABsAAgADAGUAAADs/w8AAgADAGUAAADs/xEAAgADAGUAAADp/xAAAgADAGUAAADs/w4AAgADAEUAAADx/w0AAgADAEUAAAAzAA0AAgADAEUAAAA4AA0AAgADAEUAAAAvABAAAgADAGUAAAAyAA8AAgADAGUAAAAvACUAAgADAGUAAAAsACUAAgADAGUAAAAxACgAAgADAGUAAAAxACcAAgADAGUAAABYAAIAAgADAGUAAABVAAcAAgADAGUAAABMAAgAAgADAGUAAABRAAgAAgADAGUAAABSAAcAAgADAGUAAABqACgAAgADAGUAAABhACcAAgADAGUAAABmABgAAgADAGUAAABsABgAAgADAGUAAABrABYAAgADAGUAAABqABQAAgADAEUAAABmACYAAgADAEUAAABqACUAAgADAEUAAAB+AB4AAgADAEUAAAB6AB4AAgADAEUAAAB/ABsAAgADAEUAAAC9/woAAgADAEUAAAC7/wwAAgADAEUAAACz/wwAAgADAEUAAAC3/wwAAgADAEUAAAC3/w4AAgADAEUAAACo/x0AAgADAEUAAACs/yIAAgADAEUAAACy/yMAAgADAEUAAACm/x4AAgADAGUAAACf/w8AAgADAGUAAACh/w4AAgADAGUAAACh/w8AAgADAGUAAACi/xQAAgADAGUAAACi/xAAAgADAGUAAACg/xEAAgADAGUAAACk/xQAAgADAGUAAADK/woAAgADAGUAAAAQAAsAAgADAGUAAAASAAwAAgADAGUAAAAiAAUAAgADAGUAAAA8ABEAAgADAGUAAAA=")
 tile_set = ExtResource("2_r6gmb")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 35.0
+wait_time = 20.0
 one_shot = true
 autostart = true
 script = ExtResource("4_r6gmb")
 
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
 [node name="wood log" parent="." instance=ExtResource("5_wh6qq")]
-position = Vector2(317, 510)
+position = Vector2(1278, 52)
 
 [node name="wood log2" parent="." instance=ExtResource("5_wh6qq")]
 position = Vector2(-459, 446)
+
+[node name="tree-interact" parent="." instance=ExtResource("6_or1ld")]
+position = Vector2(324, 500)
+
+[node name="bricks" parent="." instance=ExtResource("7_vlki2")]
+position = Vector2(768, 184)
+
+[node name="bricks2" parent="." instance=ExtResource("7_vlki2")]
+position = Vector2(1974, 384)
+
+[node name="Area2D" parent="." instance=ExtResource("8_ighjx")]
+position = Vector2(-1260, 423)
+
+[node name="Area2D2" parent="." instance=ExtResource("8_ighjx")]
+position = Vector2(1192, 326)
+
+[node name="bricks3" parent="." instance=ExtResource("7_vlki2")]
+position = Vector2(-852, 92)
+
+[node name="log" parent="." instance=ExtResource("9_261h4")]
+position = Vector2(-1502, 162)
+
+[node name="tree-interact2" parent="." instance=ExtResource("6_or1ld")]
+position = Vector2(-322, 94)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_wh6qq")]
 position = Vector2(-19, 204)

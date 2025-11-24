@@ -4,7 +4,7 @@ func _ready():
 	interactable.interact = _on_interact
 
 func _on_interact():
-	e.game1score += 100
+	e.game1score -= 50
 	e.game1actualscore = str(e.game1score)
-	print ("yes")
+	e.l = true
 	queue_free()

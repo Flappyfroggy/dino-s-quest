@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://i0xcymmn28nm"]
+
+[ext_resource type="Script" uid="uid://diitqlnkih837" path="res://wood_log.gd" id="1_vgnok"]
+[ext_resource type="Texture2D" uid="uid://etjnsaeba8ys" path="res://assets/otherwood.png" id="2_loqsm"]
+[ext_resource type="PackedScene" uid="uid://dihbw88h6l4nj" path="res://interactablessss/interactables.tscn" id="3_jysic"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vvicw"]
+radius = 98.12747
+
+[node name="log" type="Area2D"]
+script = ExtResource("1_vgnok")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.0000038, -1.9999981)
+scale = Vector2(0.35555556, 0.3624031)
+texture = ExtResource("2_loqsm")
+
+[node name="interactables" parent="." instance=ExtResource("3_jysic")]
+interact_name = "wood"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactables"]
+shape = SubResource("CircleShape2D_vvicw")

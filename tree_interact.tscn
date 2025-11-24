@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckufcdsvgdamv"]
+
+[ext_resource type="Script" uid="uid://b8bbpf5w6d4ut" path="res://tree_interact.gd" id="1_bj1w1"]
+[ext_resource type="Texture2D" uid="uid://c1bpxm1r1bcik" path="res://assets/tree.png" id="1_bsws1"]
+[ext_resource type="PackedScene" uid="uid://dihbw88h6l4nj" path="res://interactablessss/interactables.tscn" id="2_bj1w1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_70udf"]
+radius = 105.380264
+
+[node name="tree-interact" type="Area2D"]
+script = ExtResource("1_bj1w1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.9999981, -8)
+scale = Vector2(0.406, 0.428)
+texture = ExtResource("1_bsws1")
+
+[node name="interactables" parent="." instance=ExtResource("2_bj1w1")]
+interact_name = "tree"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactables"]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_70udf")
