@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=4 uid="uid://cux114pp0g0su"]
+
+[ext_resource type="Texture2D" uid="uid://bnvr0cum5rl6f" path="res://assets/background-sky.jpeg" id="1_jfut0"]
+[ext_resource type="TileSet" uid="uid://mwd8sjp2ns30" path="res://villagetileset.tres" id="2_h2fc4"]
+[ext_resource type="Script" uid="uid://ddsuxjmltgdn6" path="res://minigame1secondtimer.gd" id="3_h2fc4"]
+[ext_resource type="PackedScene" uid="uid://ckvuf4pkp0g0o" path="res://wood_log.tscn" id="3_wvf8x"]
+[ext_resource type="PackedScene" uid="uid://ckufcdsvgdamv" path="res://tree_interact.tscn" id="4_oxfiw"]
+[ext_resource type="PackedScene" uid="uid://cdms3l6vcjmvr" path="res://bricks.tscn" id="5_j5vfl"]
+[ext_resource type="PackedScene" uid="uid://bgacmhphasny1" path="res://tree.tscn" id="6_706ud"]
+[ext_resource type="PackedScene" uid="uid://i0xcymmn28nm" path="res://log.tscn" id="7_ed2cd"]
+[ext_resource type="PackedScene" uid="uid://8ap34hq5bbv4" path="res://character_body_2d.tscn" id="8_528ca"]
+
+[node name="minigame1level2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(379.00003, 213.50002)
+scale = Vector2(0.47941205, -0.60811895)
+texture = ExtResource("1_jfut0")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAATACYAAgADAEUAAAAZACUAAgADAEUAAAD+/yIAAgADAEUAAAD4/yIAAgADAEUAAAA0ACQAAgADAEUAAAA5ACYAAgADAEUAAADQ/yUAAgADAEUAAADM/yMAAgADAEUAAADh/yIAAgADAEUAAAD4/yYAAgADAGUAAAD+/yYAAgADAGUAAAD+/ygAAgADAGUAAAAEACUAAgADAGUAAADn/yMAAgADAGUAAADn/yUAAgADAGUAAADW/xMAAgADAGUAAADZ/xcAAgADAGUAAADW/xUAAgADAGUAAAAjABcAAgADAGUAAAAgABoAAgADAGUAAAAgABwAAgADAGUAAAAkABgAAgADAGUAAAAiABgAAgADAGUAAAAeABwAAgADAGUAAABJABwAAgADAGUAAABJAB4AAgADAGUAAABNAB0AAgADAGUAAABNABsAAgADAGUAAADs/w8AAgADAGUAAADs/xEAAgADAGUAAADp/xAAAgADAGUAAADs/w4AAgADAEUAAADx/w0AAgADAEUAAAAzAA0AAgADAEUAAAA4AA0AAgADAEUAAAAvABAAAgADAGUAAAAyAA8AAgADAGUAAAAvACUAAgADAGUAAAAsACUAAgADAGUAAAAxACgAAgADAGUAAAAxACcAAgADAGUAAABYAAIAAgADAGUAAABVAAcAAgADAGUAAABMAAgAAgADAGUAAABRAAgAAgADAGUAAABSAAcAAgADAGUAAABqACgAAgADAGUAAABhACcAAgADAGUAAABmABgAAgADAGUAAABsABgAAgADAGUAAABrABYAAgADAGUAAABqABQAAgADAEUAAABmACYAAgADAEUAAABqACUAAgADAEUAAAB+AB4AAgADAEUAAAB6AB4AAgADAEUAAAB/ABsAAgADAEUAAAC9/woAAgADAEUAAAC7/wwAAgADAEUAAACz/wwAAgADAEUAAAC3/wwAAgADAEUAAAC3/w4AAgADAEUAAACo/x0AAgADAEUAAACs/yIAAgADAEUAAACy/yMAAgADAEUAAACm/x4AAgADAGUAAACf/w8AAgADAGUAAACh/w4AAgADAGUAAACh/w8AAgADAGUAAACi/xQAAgADAGUAAACi/xAAAgADAGUAAACg/xEAAgADAGUAAACk/xQAAgADAGUAAADK/woAAgADAGUAAAAQAAsAAgADAGUAAAASAAwAAgADAGUAAAAiAAUAAgADAGUAAAA8ABEAAgADAGUAAAA=")
+tile_set = ExtResource("2_h2fc4")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+autostart = true
+script = ExtResource("3_h2fc4")
+
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+
+[node name="wood log" parent="." instance=ExtResource("3_wvf8x")]
+position = Vector2(1226, 368)
+
+[node name="wood log2" parent="." instance=ExtResource("3_wvf8x")]
+position = Vector2(-307, 130)
+
+[node name="tree-interact" parent="." instance=ExtResource("4_oxfiw")]
+position = Vector2(324, 500)
+
+[node name="bricks" parent="." instance=ExtResource("5_j5vfl")]
+position = Vector2(843, 128)
+
+[node name="bricks2" parent="." instance=ExtResource("5_j5vfl")]
+position = Vector2(1974, 384)
+
+[node name="Area2D" parent="." instance=ExtResource("6_706ud")]
+position = Vector2(1623, 284)
+
+[node name="Area2D2" parent="." instance=ExtResource("6_706ud")]
+position = Vector2(-405, 447)
+
+[node name="bricks3" parent="." instance=ExtResource("5_j5vfl")]
+position = Vector2(-852, 92)
+
+[node name="log" parent="." instance=ExtResource("7_ed2cd")]
+position = Vector2(-1502, 162)
+
+[node name="tree-interact2" parent="." instance=ExtResource("4_oxfiw")]
+position = Vector2(-623, 261)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("8_528ca")]
+position = Vector2(-19, 204)
+
+[node name="Label" type="Label" parent="CharacterBody2D"]
+offset_left = -282.0
+offset_top = -199.0
+offset_right = 166.0
+offset_bottom = -10.0
+theme_override_font_sizes/font_size = 20
+text = "You have 60 seconds left!
+Score: 0"

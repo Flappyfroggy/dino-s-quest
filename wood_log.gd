@@ -6,5 +6,5 @@ func _ready():
 func _on_interact():
 	e.game1score += 100
 	e.game1actualscore = str(e.game1score)
-	print ("yes")
+	e.k = true
 	queue_free()

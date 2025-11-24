@@ -21,7 +21,7 @@ texture = ExtResource("2_ghijl")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -3292
-limit_top = -5
+limit_top = -414
 limit_right = 3677
 limit_bottom = 662
 

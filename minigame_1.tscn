@@ -13,8 +13,8 @@
 [node name="minigame1" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(543.00024, 306.50003)
-scale = Vector2(0.44175982, -0.5004019)
+position = Vector2(379.00003, 213.50002)
+scale = Vector2(0.47941205, -0.60811895)
 texture = ExtResource("1_0hvi2")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -22,13 +22,12 @@ tile_map_data = PackedByteArray("AAATACYAAgADAEUAAAAZACUAAgADAEUAAAD+/yIAAgADAEU
 tile_set = ExtResource("2_r6gmb")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 20.0
+wait_time = 30.0
 one_shot = true
 autostart = true
 script = ExtResource("4_r6gmb")
 
 [node name="Timer2" type="Timer" parent="."]
-wait_time = 3.0
 one_shot = true
 
 [node name="wood log" parent="." instance=ExtResource("5_wh6qq")]

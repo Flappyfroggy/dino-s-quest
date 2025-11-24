@@ -8,8 +8,8 @@
 [node name="village" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(183, 318.00003)
-scale = Vector2(0.7124988, 0.26949355)
+position = Vector2(189, 107.56245)
+scale = Vector2(0.7124988, 0.42649716)
 texture = ExtResource("1_pxdql")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
