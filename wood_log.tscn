@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dihbw88h6l4nj" path="res://interactablessss/interactables.tscn" id="3_fymg4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w3db2"]
-radius = 105.5
+radius = 113.0177
 
 [node name="wood log" type="Area2D"]
 script = ExtResource("1_k30lv")

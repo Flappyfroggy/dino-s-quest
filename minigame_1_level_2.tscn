@@ -40,7 +40,7 @@ position = Vector2(-307, 130)
 position = Vector2(324, 500)
 
 [node name="bricks" parent="." instance=ExtResource("5_j5vfl")]
-position = Vector2(843, 128)
+position = Vector2(793, 151)
 
 [node name="bricks2" parent="." instance=ExtResource("5_j5vfl")]
 position = Vector2(1974, 384)

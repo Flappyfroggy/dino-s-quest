@@ -5,19 +5,19 @@
 [ext_resource type="PackedScene" uid="uid://confhjrouux3o" path="res://interactablessss/interacting_component.tscn" id="3_ghijl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44cfe"]
-size = Vector2(109, 114)
+size = Vector2(95, 107)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_ij6vw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8.5, -15)
-shape = SubResource("RectangleShape2D_44cfe")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-10, -15.000002)
+position = Vector2(-10, -15)
 scale = Vector2(0.24249999, 0.252)
 texture = ExtResource("2_ghijl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, -13.5)
+shape = SubResource("RectangleShape2D_44cfe")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -3292

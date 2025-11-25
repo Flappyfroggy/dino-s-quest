@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7g81s3aoclxp"]
+
+[ext_resource type="Texture2D" uid="uid://e046motbwkbu" path="res://assets/bunny.PNG" id="1_3p8cj"]
+[ext_resource type="Script" uid="uid://bismd0ohi40tv" path="res://mayor_bunny.gd" id="1_x1e4o"]
+[ext_resource type="PackedScene" uid="uid://dihbw88h6l4nj" path="res://interactablessss/interactables.tscn" id="2_x1e4o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4fvav"]
+radius = 93.214806
+
+[node name="mayor-bunny" type="Area2D"]
+script = ExtResource("1_x1e4o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.0000038, -2.0000038)
+scale = Vector2(0.59, 0.5804196)
+texture = ExtResource("1_3p8cj")
+
+[node name="interactables" parent="." instance=ExtResource("2_x1e4o")]
+interact_name = "bunny"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactables"]
+shape = SubResource("CircleShape2D_4fvav")

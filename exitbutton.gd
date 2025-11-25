@@ -4,4 +4,3 @@ func _ready():
 
 func _on_button_pressed():
 	e.f = true
-	

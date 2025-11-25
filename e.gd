@@ -9,3 +9,5 @@ var l: bool = false
 var k: bool = false
 var finishminigame1: bool = false
 var shown1: bool = false
+var v: bool = false
+var exit: bool = false
