@@ -1,0 +1,8 @@
+~ start
+Mayor: [[Hi|Hello|Howdy]], would you please help me!
+- Of course! what do you need?
+	Mayor: Please, take a look at the quest i put up to your right.
+- No thanks!
+	Mayor: What's that i hear? You'll do it? Thankyou!
+	Mayor: Please, take a look at the quest i put up to your right.
+=> END
