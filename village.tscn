@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://dt1mwc7mi5xuh"]
+[gd_scene load_steps=7 format=4 uid="uid://dt1mwc7mi5xuh"]
 
 [ext_resource type="Texture2D" uid="uid://bnvr0cum5rl6f" path="res://assets/background-sky.jpeg" id="1_pxdql"]
 [ext_resource type="TileSet" uid="uid://mwd8sjp2ns30" path="res://villagetileset.tres" id="2_jak2h"]
 [ext_resource type="PackedScene" uid="uid://8ap34hq5bbv4" path="res://character_body_2d.tscn" id="3_qyljj"]
 [ext_resource type="PackedScene" uid="uid://djav70gn6bv7j" path="res://billboard.tscn" id="4_jak2h"]
 [ext_resource type="PackedScene" uid="uid://c7g81s3aoclxp" path="res://mayor_bunny.tscn" id="4_wybox"]
+[ext_resource type="PackedScene" uid="uid://cha145p0itrrb" path="res://shopsign.tscn" id="5_6t5gs"]
 
 [node name="village" type="Node2D"]
 
@@ -22,6 +23,9 @@ position = Vector2(-6, 1)
 
 [node name="mayor-bunny" parent="." instance=ExtResource("4_wybox")]
 position = Vector2(-736, 495)
+
+[node name="shopsign" parent="." instance=ExtResource("5_6t5gs")]
+position = Vector2(1669, -8)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_qyljj")]
 position = Vector2(6, 265)

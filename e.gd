@@ -14,3 +14,4 @@ var exit: bool = false
 var coins = 0
 var talkedmayor: bool = false
 var sucess1: bool
+var playerdialogue: bool = false

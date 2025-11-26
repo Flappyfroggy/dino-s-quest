@@ -25,4 +25,6 @@ if e.finishminigame1 and not e.talkedmayor:
 		Mayor: I'm sorry, that really isn't enough.. i'll have to say this quest hasn't been completed.
 		set e.success1 = false
 	set e.talkedmayor = true
+if e.finishminigame1 and e.talkedmayor:
+	Mayor: I'm sorry, i'm rather busy at this current moment. Please, i'll be available at a later date.
 => END

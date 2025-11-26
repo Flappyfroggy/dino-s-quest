@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cr0x3i1o25qh7"
+path="res://.godot/imported/shop_sign.dialogue-8975ced390275e83425b9f010615859e.tres"
+
+[deps]
+
+source_file="res://shop_sign.dialogue"
+dest_files=["res://.godot/imported/shop_sign.dialogue-8975ced390275e83425b9f010615859e.tres"]
+
+[params]
+
+defaults=true

@@ -19,3 +19,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = e.jump
 	move_and_slide()
+func _ready():
+	if not e.playerdialogue:
+		DialogueManager.show_dialogue_balloon(load("res://player.dialogue"), "start")
+		e.playerdialogue = true

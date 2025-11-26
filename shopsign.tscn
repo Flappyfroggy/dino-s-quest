@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://cha145p0itrrb"]
+
+[ext_resource type="Script" uid="uid://cg3ug3iso54vp" path="res://shopsign.gd" id="1_g77do"]
+[ext_resource type="Texture2D" uid="uid://c60lgxh0n7l7s" path="res://assets/task board.png" id="1_nwig0"]
+[ext_resource type="PackedScene" uid="uid://dihbw88h6l4nj" path="res://interactablessss/interactables.tscn" id="2_g77do"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7xxo"]
+size = Vector2(157, 138)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j7h4d"]
+radius = 130.06152
+
+[node name="shopsign" type="Area2D"]
+position = Vector2(-1437, -491)
+script = ExtResource("1_g77do")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1414.3658, 491.866)
+scale = Vector2(0.7699561, 0.6820247)
+texture = ExtResource("1_nwig0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1423.5, 507)
+shape = SubResource("RectangleShape2D_g7xxo")
+
+[node name="interactables" parent="." instance=ExtResource("2_g77do")]
+position = Vector2(1465, 456)
+interact_name = "shop sign"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactables"]
+position = Vector2(-49, 38)
+shape = SubResource("CircleShape2D_j7h4d")

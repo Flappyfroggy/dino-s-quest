@@ -74,5 +74,5 @@ text = "Request: Help the mayor!"
 [node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-text = "Help! the tyrant ruler has threatened to take down everything in this village to build a new industrial plant if we don't rebuild quickly! Please, help me clear away pieces of debris before he arrives."
+text = "Help! Please, clear away leftover construction and debris before the land inspector arrives! I really don't have the coins to pay the fees he'll give me if we don't remove them soon."
 autowrap_mode = 2
