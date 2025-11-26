@@ -14,7 +14,6 @@ func _physics_process(delta):
 	if is_on_floor():
 		notfloor = 0.0
 	if notfloor >= 3:
-		get_tree().change_scene_to_file("res://village.tscn")
 		position = initial_p
 		notfloor = 0
 	if Input.is_action_pressed("jump") and is_on_floor():

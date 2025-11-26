@@ -1,8 +1,28 @@
 ~ start
-Mayor: [[Hi|Hello|Howdy]], would you please help me!
-- Of course! what do you need?
-	Mayor: Please, take a look at the quest i put up to your right.
-- No thanks!
-	Mayor: What's that i hear? You'll do it? Thankyou!
-	Mayor: Please, take a look at the quest i put up to your right.
+[next=auto]
+if not e.finishminigame1:
+	Mayor: [[Hi|Hello|Howdy]], you're the new adventurer aren't you?
+	- Yes
+		Mayor: Oh good, would you be willing to help me?
+		- Of course! what do you need?
+			Mayor: Please, take a look at the quest i put up to your right.
+		- No thanks!
+			Mayor: What's that i hear? You'll do it? Thankyou!
+			Mayor: Please, take a look at the quest i put up to your right.
+	- No, i am Sir Eeepo!
+		Mayor: Aww. => END
+if e.finishminigame1 and not e.talkedmayor:
+	Player: Hi, i completed your quest. 
+	Mayor: Really?! Lets see here...
+	Mayor: You helped to clear debris and got a score of {{e.game1actualscore}}
+	if e.game1actualscore > str(499):
+		Mayor: Woah! thank you for your help!
+		Mayor: Please, take my coins!
+		set e.coins += 10
+		set e.success1 = true
+		Mayor: you have {{e.coins}} coins now! Theres a shop to the far right you might be interested in.
+	if e.game1actualscore < str(499):
+		Mayor: I'm sorry, that really isn't enough.. i'll have to say this quest hasn't been completed.
+		set e.success1 = false
+	set e.talkedmayor = true
 => END

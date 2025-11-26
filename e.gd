@@ -11,3 +11,6 @@ var finishminigame1: bool = false
 var shown1: bool = false
 var v: bool = false
 var exit: bool = false
+var coins = 0
+var talkedmayor: bool = false
+var sucess1: bool
