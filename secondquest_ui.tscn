@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3wk32mmk2drg"]
+[gd_scene load_steps=3 format=3 uid="uid://w3udasolh1oo"]
 
-[ext_resource type="Script" uid="uid://dp5wj3bdf3sbc" path="res://exitbutton.gd" id="1_csjm6"]
-[ext_resource type="Script" uid="uid://cq386v21t8l0v" path="res://acceptquest1.gd" id="1_jmcgm"]
+[ext_resource type="Script" uid="uid://bq6mhyl0je5k3" path="res://acceptquest2.gd" id="1_bc7at"]
+[ext_resource type="Script" uid="uid://bjqrs2o7r71i8" path="res://exit2ndquestui.gd" id="1_ntvlv"]
 
 [node name="QuestUI" type="Control"]
 layout_mode = 3
@@ -48,13 +48,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 text = "Accept Quest"
-script = ExtResource("1_jmcgm")
+script = ExtResource("1_bc7at")
 
 [node name="exitbutton" type="Button" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Exit"
-script = ExtResource("1_csjm6")
+script = ExtResource("1_ntvlv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 5
@@ -69,10 +69,10 @@ grow_horizontal = 2
 [node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 70
-text = "Request: Help the mayor!"
+text = "Request: Arcade Machine"
 
 [node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-text = "Help! Please, the land inspector is arriving soon and he's going to see all the leftover construction and debris from last month! please, remove as much as you can for me before he arrives."
+text = "Hey! I just know my arcade machine is broken somehow. It's impossible to win! If you can beat it, i'll even give you some coins - Eric"
 autowrap_mode = 2

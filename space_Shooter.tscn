@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bope6rbev5b0k"]
+
+[ext_resource type="Texture2D" uid="uid://bpvy3xc801s4s" path="res://assets/black-purple-bg.jpg" id="1_7nwrc"]
+[ext_resource type="PackedScene" uid="uid://ci3p27xgdiqw3" path="res://spaceship.tscn" id="2_laudi"]
+
+[node name="space shooter" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(581.50006, 327.50006)
+scale = Vector2(0.60468745, 0.60648155)
+texture = ExtResource("1_7nwrc")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_laudi")]
+position = Vector2(569, 527)

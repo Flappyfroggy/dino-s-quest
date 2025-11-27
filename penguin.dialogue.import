@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dle5fmv5v10j"
+path="res://.godot/imported/penguin.dialogue-11a9310061ac24432dff97bbd32c676b.tres"
+
+[deps]
+
+source_file="res://penguin.dialogue"
+dest_files=["res://.godot/imported/penguin.dialogue-11a9310061ac24432dff97bbd32c676b.tres"]
+
+[params]
+
+defaults=true

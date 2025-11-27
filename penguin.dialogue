@@ -1,0 +1,16 @@
+~ start
+if not e.finishminigame2:
+	Eric: [[Hola|Bonjour|Ciao]], I'm Eric!
+	- hello!
+		Eric: I'm wondering, are you interested in arcade games like space shooter?
+		- yes! i'd love to play, if you're offering!
+			Eric: of course!! please, be my guest and take a look at the quest i put up on the community billboard.
+			- on the what?
+				Eric: Oh, you're the new adenturer aren't you?
+				Eric: just follow the village path right and you'll see it.
+			- will do!
+				Eric: See you! 
+if e.finishminigame1 and not e.talkedpenguin:
+	Eric: "Oh what's that? you've had a go at a round of space shooters?"
+
+=> END

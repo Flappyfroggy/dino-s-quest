@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bief4gjph3txn"]
+
+[ext_resource type="Texture2D" uid="uid://co2px7lv5xyp6" path="res://assets/penguin.PNG" id="1_7j1qa"]
+[ext_resource type="Script" uid="uid://dvmm4bobap1cu" path="res://penguin.gd" id="1_yb3xo"]
+[ext_resource type="PackedScene" uid="uid://dihbw88h6l4nj" path="res://interactablessss/interactables.tscn" id="2_yb3xo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1jf55"]
+radius = 126.01587
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_yb3xo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.07830001, 0.06880001)
+texture = ExtResource("1_7j1qa")
+
+[node name="interactables" parent="." instance=ExtResource("2_yb3xo")]
+interact_name = "Eric"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactables"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_1jf55")
