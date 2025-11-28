@@ -18,3 +18,5 @@ var talkedpenguin: bool = false
 var sucess1: bool
 var playerdialogue: bool = false
 var closequest2: bool = false
+var lasercd: bool = false
+var shiptimer: bool = false

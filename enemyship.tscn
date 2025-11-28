@@ -1,18 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://ci3p27xgdiqw3"]
+[gd_scene load_steps=4 format=3 uid="uid://drm051ucehdfr"]
 
-[ext_resource type="Script" uid="uid://bgloofslrlkyn" path="res://spaceship.gd" id="1_7g3nn"]
-[ext_resource type="Texture2D" uid="uid://x4yof7hkon3p" path="res://assets/player_b_l2.png" id="2_pmkdn"]
+[ext_resource type="Script" uid="uid://55vbyfjak4r4" path="res://enemyship.gd" id="1_lv4ox"]
+[ext_resource type="Texture2D" uid="uid://d0i6tkyjeoex5" path="res://assets/enemy.png" id="1_vhu4w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_51qc7"]
 size = Vector2(90, 96)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-script = ExtResource("1_7g3nn")
+script = ExtResource("1_lv4ox")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2, -1)
-scale = Vector2(2.671875, 2.4375)
-texture = ExtResource("2_pmkdn")
+position = Vector2(8, -10)
+scale = Vector2(0.6679688, 0.5667825)
+texture = ExtResource("1_vhu4w")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -21,7 +21,6 @@ position = Vector2(7, -6)
 shape = SubResource("RectangleShape2D_51qc7")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.25
 one_shot = true
 
 [connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
