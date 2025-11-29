@@ -1,13 +1,8 @@
 extends CharacterBody2D
-@onready var shiptimer = $Timer
 func _physics_process(_delta):
-	velocity.y = 100
+	velocity.y = 50
 	move_and_slide()
-	if not e.shiptimer:
-		shiptimer.start()
-func _on_timer():
-	e.shiptimer = true
-	
-func _ready():
-	shiptimer.timeout.connect(self._on_timer)
-#THIS TIMER ISNT WORKIN
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+		queue_free()
+		
