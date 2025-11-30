@@ -16,8 +16,11 @@ var coins = 0
 var talkedmayor: bool = false
 var talkedpenguin: bool = false
 var sucess1: bool
+var sucess2: bool
 var playerdialogue: bool = false
 var closequest2: bool = false
 var lasercd: bool = false
 var shiptimero: bool = false
 var shiptimerstarted: bool = false
+var spaceshootpoints = str(0)
+var spacepoint_int = int(0)

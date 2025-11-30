@@ -14,10 +14,13 @@ position = Vector2(8, -10)
 scale = Vector2(0.6679688, 0.5667825)
 texture = ExtResource("1_vhu4w")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="eepy" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="eepy"]
 position = Vector2(7, -6)
 shape = SubResource("RectangleShape2D_51qc7")
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="area_entered" from="eepy" to="." method="_on_area_2d_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

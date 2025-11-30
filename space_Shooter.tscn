@@ -17,7 +17,22 @@ texture = ExtResource("1_7nwrc")
 position = Vector2(569, 527)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("4_0vrwd")]
+visible = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.3
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 38.0
+offset_top = 32.0
+offset_right = 486.0
+offset_bottom = 109.0
+theme_override_font_sizes/font_size = 27
+text = "Time left: 0 Points: 0 
+"
+autowrap_mode = 2
+
+[node name="TIMELIMIT" type="Timer" parent="."]
+wait_time = 40.0
 one_shot = true
