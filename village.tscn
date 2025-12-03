@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://dt1mwc7mi5xuh"]
+[gd_scene load_steps=11 format=4 uid="uid://dt1mwc7mi5xuh"]
 
 [ext_resource type="Texture2D" uid="uid://bnvr0cum5rl6f" path="res://assets/background-sky.jpeg" id="1_pxdql"]
 [ext_resource type="TileSet" uid="uid://mwd8sjp2ns30" path="res://villagetileset.tres" id="2_jak2h"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://c7g81s3aoclxp" path="res://mayor_bunny.tscn" id="4_wybox"]
 [ext_resource type="PackedScene" uid="uid://cha145p0itrrb" path="res://shopsign.tscn" id="5_6t5gs"]
 [ext_resource type="PackedScene" uid="uid://bief4gjph3txn" path="res://penguin.tscn" id="6_efnqa"]
+[ext_resource type="PackedScene" uid="uid://bdgr3mfmd3sr3" path="res://jeff.tscn" id="7_xyni6"]
+[ext_resource type="PackedScene" uid="uid://cio7kth44jwlf" path="res://cat.tscn" id="8_2ydvt"]
+[ext_resource type="PackedScene" uid="uid://vii1l6k3pgea" path="res://cat2.tscn" id="10_bixrm"]
 
 [node name="village" type="Node2D"]
 
@@ -23,13 +26,22 @@ tile_set = ExtResource("2_jak2h")
 position = Vector2(-6, 1)
 
 [node name="mayor-bunny" parent="." instance=ExtResource("4_wybox")]
-position = Vector2(-736, 495)
+position = Vector2(-630, 497)
 
 [node name="shopsign" parent="." instance=ExtResource("5_6t5gs")]
 position = Vector2(1669, -8)
 
 [node name="Area2D" parent="." instance=ExtResource("6_efnqa")]
-position = Vector2(592, 499)
+position = Vector2(697, 499)
+
+[node name="Area2D2" parent="." instance=ExtResource("7_xyni6")]
+position = Vector2(-1685, 437)
+
+[node name="Area2D3" parent="." instance=ExtResource("8_2ydvt")]
+position = Vector2(-2404, 503)
+
+[node name="Area2D4" parent="." instance=ExtResource("10_bixrm")]
+position = Vector2(2440, 540)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_qyljj")]
 position = Vector2(6, 265)

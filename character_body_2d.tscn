@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://8ap34hq5bbv4"]
+[gd_scene load_steps=6 format=3 uid="uid://8ap34hq5bbv4"]
 
 [ext_resource type="Script" uid="uid://cgvp0cqejsslv" path="res://character_body_2d.gd" id="1_ij6vw"]
 [ext_resource type="Texture2D" uid="uid://byy08qfymv5pl" path="res://assets/dino.PNG" id="2_ghijl"]
+[ext_resource type="PackedScene" uid="uid://b40yq2xqi06rp" path="res://coins.tscn" id="3_44cfe"]
 [ext_resource type="PackedScene" uid="uid://confhjrouux3o" path="res://interactablessss/interacting_component.tscn" id="3_ghijl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44cfe"]
@@ -24,6 +25,19 @@ limit_left = -3292
 limit_top = -414
 limit_right = 3677
 limit_bottom = 662
+
+[node name="Control" parent="Camera2D" instance=ExtResource("3_44cfe")]
+clip_contents = true
+layout_direction = 2
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="interacting component" parent="." instance=ExtResource("3_ghijl")]
 position = Vector2(4, -89)

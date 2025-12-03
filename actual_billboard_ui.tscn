@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cv4363q8b1a06"]
+[gd_scene load_steps=5 format=3 uid="uid://cv4363q8b1a06"]
 
 [ext_resource type="Script" uid="uid://cr1n2uetsercr" path="res://quest1button.gd" id="1_836tq"]
 [ext_resource type="Script" uid="uid://dolnpb4d7ldkg" path="res://quest2button.gd" id="2_g2d3h"]
+[ext_resource type="Script" uid="uid://cj4if5x7itocb" path="res://quest3button.gd" id="3_0upu3"]
 
 [sub_resource type="Theme" id="Theme_ghftd"]
 
@@ -91,3 +92,28 @@ layout_mode = 2
 size_flags_vertical = 10
 text = "Inspect Details"
 script = ExtResource("2_g2d3h")
+
+[node name="Panel4" type="Panel" parent="CanvasLayer"]
+offset_left = 684.0
+offset_top = 169.0
+offset_right = 841.0
+offset_bottom = 375.0
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 690.0
+offset_top = 164.0
+offset_right = 841.0
+offset_bottom = 373.0
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Quest from villager:
+Rewards 10 coins"
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer4"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Inspect Details"
+script = ExtResource("3_0upu3")

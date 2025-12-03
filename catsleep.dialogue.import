@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://6lnxtb683ffw"
+path="res://.godot/imported/catsleep.dialogue-1e9f9eaf6f5ef69fb932c8cb4c8447fe.tres"
+
+[deps]
+
+source_file="res://catsleep.dialogue"
+dest_files=["res://.godot/imported/catsleep.dialogue-1e9f9eaf6f5ef69fb932c8cb4c8447fe.tres"]
+
+[params]
+
+defaults=true

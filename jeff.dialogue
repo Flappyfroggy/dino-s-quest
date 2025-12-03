@@ -1,0 +1,35 @@
+~ start
+Player: [[yo!|hey!]], you alright there?
+Jeff: Alright i am, for Jeff is I.
+Jeff: predictable your future is, i shall.
+if e.finishminigame1 and e.finishminigame2 and e.talkedmayor and e.talkedpenguin:
+	if e.sucess1 and not e.sucess2:
+		Jeff: Coins you desire, quests you try.
+		Jeff: 2 quests you have tried, yet only one successful.
+		Jeff: your mission is doomed to fail.
+		Jeff: However, i wonder if something else could be more important.
+		Jeff: Perhaps, it was the friends you made along the way.
+	if e.sucess2 and not e.sucess1:
+		Jeff: Coins you desire, quests you try.
+		Jeff: 2 quests you have tried, yet only one successful.
+		Jeff: your mission is doomed to fail.
+		Jeff: However, i wonder if something else could be more important.
+		Jeff: Perhaps, it was the friends you made along the way.
+	if e.sucess2 and e.sucess1:
+		Jeff: Coins you desire, quests you try.
+		Jeff: 2 quests you have tried, both successful.
+		Jeff: your mission has been successful.
+		Jeff: What will you do now?
+		Jeff: i wonder if something else could be more important than your original mission.
+		Jeff: Perhaps, it was the friends you made along the way.
+	if not e.sucess2 and not e.sucess1:
+		Jeff: Coins you desire, quests you try.
+		Jeff: 2 quests you have tried, both failed.
+		Jeff: your mission is doomed to fail.
+		Jeff: However, i wonder if something else could be more important.
+		Jeff: Perhaps, it was the friends you made along the way.
+elif:
+	Jeff: Coins you desire, quests you try.
+	Jeff: Perhaps it is time for you to pay a visit to the questboard, or perhaps the vilagers you have completed the quest for.
+	Jeff: Please, visit me after you attempt both.
+=> END

@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=4 uid="uid://kjrc7m6ok468"]
+
+[ext_resource type="Texture2D" uid="uid://bnvr0cum5rl6f" path="res://assets/background-sky.jpeg" id="1_lpvao"]
+[ext_resource type="TileSet" uid="uid://mwd8sjp2ns30" path="res://villagetileset.tres" id="2_txmog"]
+[ext_resource type="PackedScene" uid="uid://cha145p0itrrb" path="res://shopsign.tscn" id="5_iq1sh"]
+[ext_resource type="PackedScene" uid="uid://cio7kth44jwlf" path="res://cat.tscn" id="8_oflkm"]
+[ext_resource type="PackedScene" uid="uid://vii1l6k3pgea" path="res://cat2.tscn" id="9_d5nnr"]
+[ext_resource type="PackedScene" uid="uid://8ap34hq5bbv4" path="res://character_body_2d.tscn" id="10_yj4re"]
+
+[node name="village" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1650.5, 109.56248)
+scale = Vector2(0.5828048, 0.42488945)
+texture = ExtResource("1_lpvao")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AADW/yYAAgADAEUAAADc/yYAAgADAEUAAADi/yYAAgADAEUAAADo/yYAAgADAEUAAADu/yYAAgADAEUAAAD0/yYAAgADAEUAAAD6/yYAAgADAEUAAAAAACYAAgADAEUAAAAGACYAAgADAEUAAAAMACYAAgADAEUAAAASACYAAgADAEUAAAAYACYAAgADAEUAAAAeACYAAgADAEUAAAAjACYAAgADAEUAAAApACYAAgADAEUAAAAvACYAAgADAEUAAAA1ACYAAgADAEUAAAA7ACYAAgADAEUAAABBACYAAgADAEUAAADi/xwAAgAlABgAAAAxABwAAgBbAAkAAAAxABkAAgBbAAkAAAD0/x4AAgACAA0AAAD5/yAAAgACAA0AAAAYAB4AAgACAA0AAAAxABsAAgBbAAkAAABHACYAAgADAEUAAABmAB8AAgACAA0AAAB1AB0AAgBaAEYAAACyAB0AAgAlABgAAACyABsAAgAlABgAAACyABoAAgAlABgAAAChACYAAgADAEUAAACkAB4AAgAlABgAAACPACYAAgADAEUAAACNAB0AAgACAA0AAACVACYAAgADAEUAAACbACYAAgADAEUAAADFACYAAgADAEUAAACnACYAAgADAEUAAAC5ACYAAgADAEUAAACtACYAAgADAEUAAACzACYAAgADAEUAAAC/ACYAAgADAEUAAADLACYAAgADAEUAAADRACYAAgADAEUAAADjACYAAgADAEUAAADpACYAAgADAEUAAADXACYAAgADAEUAAADdACYAAgADAEUAAADQAB4AAgACAA0AAADRABoAAgACAA0AAADSAB8AAgACAA0AAADOABsAAgACAA0AAADOAB4AAgACAA0AAADOABkAAgACAA0AAACJACYAAgADAEUAAACDACYAAgADAEUAAAB9ACYAAgADAEUAAABrACYAAgADAEUAAABlACYAAgADAEUAAABxACYAAgADAEUAAAB3ACYAAgADAEUAAABfACYAAgADAEUAAABTACYAAgADAEUAAABZACYAAgADAEUAAABNACYAAgADAEUAAABOACEAAgACAA0AAAA=")
+tile_set = ExtResource("2_txmog")
+
+[node name="shopsign" parent="." instance=ExtResource("5_iq1sh")]
+position = Vector2(1669, -8)
+
+[node name="Area2D3" parent="." instance=ExtResource("8_oflkm")]
+position = Vector2(1084, 493)
+
+[node name="Area2D4" parent="." instance=ExtResource("9_d5nnr")]
+position = Vector2(2107, 543)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("10_yj4re")]
+position = Vector2(6, 265)

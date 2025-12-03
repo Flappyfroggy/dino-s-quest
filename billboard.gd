@@ -32,4 +32,3 @@ func _process(_delta):
 		finishminigame1screencanvas.hide()
 		e.f = false
 		e.shown1 = true
-	

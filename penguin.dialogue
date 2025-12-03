@@ -8,23 +8,27 @@ if not e.finishminigame2:
 			- on the what?
 				Eric: Oh, you're the new adenturer aren't you?
 				Eric: just follow the village path right and you'll see it.
+				Eric: Also, feel free to visit some of the villagers on the left side of the village.
+				Eric: You might find some important wisdom waiting for you.
 			- will do!
 				Eric: See you! 
+				Eric: Also, feel free to visit some of the villagers on the left side of the village.
+				Eric: You might find some important wisdom waiting for you.
 if e.finishminigame2 and not e.talkedpenguin:
-	Eric: "Oh what's that? you've had a go at a round of space shooters?"
+	Eric: Oh what's that? you've had a go at a round of space shooters?
 	if e.spacepoint_int > 599:
 		Eric: You got a score of {{e.spaceshootpoints}}
 		Eric: Woah! thats so much. my arcade machine really isn't broken, is it?
 		Eric: Please, take my coins!
 		set e.coins += 10
-		set e.success2 = true
+		set e.sucess2 = true
 		Eric: you have {{e.coins}} coins now. Have a good day!
 	if e.spacepoint_int < 499:
 		Eric: You got a score of {{e.spaceshootpoints}}
 		Eric: Even I got more points than that..
-		Eric: I'm sorry, but that doesn't actually count as winning a round.
-		set e.success2 = false
+		Eric: I'm sorry, but that doesn't really count as winning a round.
+		set e.sucess2 = false
 	set e.talkedpenguin = true
 if e.finishminigame2 and e.talkedpenguin:
-	Eric: Hi.
+	Eric: Anyways, feel free to drop by any time!
 	=> END

@@ -15,16 +15,17 @@ if e.finishminigame1 and not e.talkedmayor:
 	Player: Hi, i completed your quest. 
 	Mayor: Really?! Lets see here...
 	Mayor: You helped to clear debris and got a score of {{e.game1actualscore}}
-	if e.game1actualscore > str(499):
+	if e.game1score > str(499):
 		Mayor: Woah! thank you for your help!
 		Mayor: Please, take my coins!
 		set e.coins += 10
-		set e.success1 = true
-		Mayor: you have {{e.coins}} coins now! Theres a shop to the far right you might be interested in.
-	if e.game1actualscore < str(499):
+		set e.sucess1 = true
+		Mayor: you have {{e.coins}} coins now and completed this quest. Theres a shop to the far right you might be interested in.
+	if e.game1score < str(499):
 		Mayor: I'm sorry, that really isn't enough.. i'll have to say this quest hasn't been completed.
-		set e.success1 = false
+		set e.sucess1 = false
 	set e.talkedmayor = true
 if e.finishminigame1 and e.talkedmayor:
-	Mayor: I'm sorry, i'm rather busy at this current moment. Please, i'll be available at a later date.
+	Mayor: Feel free to visit the rest of the village, especially Jeff on the left.
+	Mayor: Or drop by my house and have a nice coffee!
 => END

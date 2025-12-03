@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cio7kth44jwlf"]
+
+[ext_resource type="Script" uid="uid://dywm1idexbde2" path="res://cat.gd" id="1_6fl1u"]
+[ext_resource type="Texture2D" uid="uid://732lv6sm2cky" path="res://assets/cat awake.PNG" id="2_w46py"]
+[ext_resource type="PackedScene" uid="uid://dihbw88h6l4nj" path="res://interactablessss/interactables.tscn" id="3_2u0g4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2hdoq"]
+radius = 100.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_6fl1u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.9073486e-06, 0.9999995)
+scale = Vector2(0.3068776, 0.3105843)
+texture = ExtResource("2_w46py")
+
+[node name="interactables" parent="." instance=ExtResource("3_2u0g4")]
+interact_name = "cat"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactables"]
+position = Vector2(5, 2)
+shape = SubResource("CircleShape2D_2hdoq")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://vii1l6k3pgea"]
+
+[ext_resource type="Script" uid="uid://byb8jhsah5v7t" path="res://catsleep.gd" id="1_rb7fp"]
+[ext_resource type="Texture2D" uid="uid://dd77627u5bgq3" path="res://assets/cat sleep.PNG" id="2_jplhf"]
+[ext_resource type="PackedScene" uid="uid://dihbw88h6l4nj" path="res://interactablessss/interactables.tscn" id="3_esel8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2hdoq"]
+radius = 100.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_rb7fp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.9073486e-06, 0.9999995)
+scale = Vector2(0.3068776, 0.3105843)
+texture = ExtResource("2_jplhf")
+
+[node name="interactables" parent="." instance=ExtResource("3_esel8")]
+interact_name = "sleeping cat"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactables"]
+position = Vector2(5, 2)
+shape = SubResource("CircleShape2D_2hdoq")

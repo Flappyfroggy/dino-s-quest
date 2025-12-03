@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dwdyq1noyjv0c"
+path="res://.godot/imported/jeff.dialogue-ac86e141a7c515abd154aa3e73293c6d.tres"
+
+[deps]
+
+source_file="res://jeff.dialogue"
+dest_files=["res://.godot/imported/jeff.dialogue-ac86e141a7c515abd154aa3e73293c6d.tres"]
+
+[params]
+
+defaults=true

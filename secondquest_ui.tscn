@@ -74,5 +74,5 @@ text = "Request: Arcade Machine"
 [node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-text = "Hey! I just know my arcade machine is broken somehow. It's impossible to win! If you can beat it, i'll even give you some coins - Eric"
+text = "Hey! I just know my arcade machine is broken somehow. It's impossible to win! If you can beat it, i'll  give you some coins. Click W to attack  - Eric"
 autowrap_mode = 2

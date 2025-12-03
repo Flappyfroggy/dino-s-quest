@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdgr3mfmd3sr3"]
+
+[ext_resource type="Script" uid="uid://deimqu20q32wh" path="res://jeff.gd" id="1_6kjau"]
+[ext_resource type="Texture2D" uid="uid://dqfljwo3x535f" path="res://assets/jeff.png" id="1_ewpx7"]
+[ext_resource type="PackedScene" uid="uid://dihbw88h6l4nj" path="res://interactablessss/interactables.tscn" id="2_6kjau"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1h8am"]
+radius = 211.28653
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_6kjau")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.000001, 1.9999998)
+scale = Vector2(0.08957499, 0.090450004)
+texture = ExtResource("1_ewpx7")
+
+[node name="interactables" parent="." instance=ExtResource("2_6kjau")]
+interact_name = "jeff"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactables"]
+position = Vector2(-12, 50)
+shape = SubResource("CircleShape2D_1h8am")

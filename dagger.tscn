@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpwm2fx65a5wf"]
+
+[ext_resource type="Script" uid="uid://ci2ieb7lu0u0n" path="res://dagger.gd" id="1_ixfv2"]
+[ext_resource type="Texture2D" uid="uid://cmsexp46r8mu5" path="res://assets/pixil-frame-0.png" id="2_gr5qi"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_ixfv2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(100.5, 15.999988)
+scale = Vector2(5.0499997, 3.4400003)
+texture = ExtResource("2_gr5qi")

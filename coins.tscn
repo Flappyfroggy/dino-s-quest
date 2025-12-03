@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://b40yq2xqi06rp"]
+
+[ext_resource type="Script" uid="uid://dlmcubkqueftp" path="res://coins.gd" id="1_665jj"]
+[ext_resource type="Texture2D" uid="uid://xbjhkb6mjlii" path="res://assets/IMG_2439.PNG" id="2_88f8t"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -987.0
+offset_bottom = -573.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_right = 165.0
+offset_bottom = 76.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_right = 164.0
+offset_bottom = 76.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel/HBoxContainer"]
+position = Vector2(41.999996, 39)
+scale = Vector2(0.14175001, 0.148)
+texture = ExtResource("2_88f8t")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 50
+text = "0"
+script = ExtResource("1_665jj")

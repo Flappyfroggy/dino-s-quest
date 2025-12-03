@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bcpqdsybh0pc2"]
+[gd_scene load_steps=11 format=4 uid="uid://bcpqdsybh0pc2"]
 
 [ext_resource type="Texture2D" uid="uid://bnvr0cum5rl6f" path="res://assets/background-sky.jpeg" id="1_0hvi2"]
 [ext_resource type="TileSet" uid="uid://mwd8sjp2ns30" path="res://villagetileset.tres" id="2_r6gmb"]
@@ -9,12 +9,13 @@
 [ext_resource type="PackedScene" uid="uid://cdms3l6vcjmvr" path="res://bricks.tscn" id="7_vlki2"]
 [ext_resource type="PackedScene" uid="uid://bgacmhphasny1" path="res://tree.tscn" id="8_ighjx"]
 [ext_resource type="PackedScene" uid="uid://i0xcymmn28nm" path="res://log.tscn" id="9_261h4"]
+[ext_resource type="PackedScene" uid="uid://vii1l6k3pgea" path="res://cat2.tscn" id="10_ighjx"]
 
 [node name="minigame1" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(379.00003, 213.50002)
-scale = Vector2(0.47941205, -0.60811895)
+position = Vector2(115, 213.50002)
+scale = Vector2(0.53256816, -0.60811895)
 texture = ExtResource("1_0hvi2")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -71,3 +72,6 @@ offset_bottom = -12.0
 theme_override_font_sizes/font_size = 30
 text = "You have 60 seconds left!
 Score: 0"
+
+[node name="Area2D3" parent="." instance=ExtResource("10_ighjx")]
+position = Vector2(549, 47)

@@ -14,7 +14,7 @@ func _on_button_pressed():
 		# through the billboard code
 		pass
 	
-#following deletes the help the mayor request ui,
+#following deletes the help the penguin request ui,
 #e.f is activated through the exit button on that page
 func _process(_delta):
 	if e.closequest2:

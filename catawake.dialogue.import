@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://i30u583kc57o"
+path="res://.godot/imported/catawake.dialogue-42d8123422fa3f006d4104f7365362bc.tres"
+
+[deps]
+
+source_file="res://catawake.dialogue"
+dest_files=["res://.godot/imported/catawake.dialogue-42d8123422fa3f006d4104f7365362bc.tres"]
+
+[params]
+
+defaults=true
