@@ -1,3 +1,16 @@
 ~ start
-Cat: [[meow|mreoow|meeoww]]
+Cat: [[meow|mreoow|meeoww]], have you completed my quest? those zombies are pretty scary.
+if not e.finishminigame3:
+	Cat: Oh, you haven't, yet. that's okay.
+if e.finishminigame3 and not e.talkedcat:
+	Cat: You have? and you killed {{e.zombiedeadcount}} zombies?
+	if e.zombiedeadcount > 9:
+		Cat: thank you.
+		set e.coins += 10
+		set e.sucess3 = true
+	if e.zombiedeadcount < 10:
+		Cat: Oh, well i guess that means the quest isn't complete. That's okay.
+	set e.talkedcat = true
+if e.finishminigame3 and e.talkedcat:
+	I'm going to take a nap.
 => END

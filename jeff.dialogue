@@ -2,30 +2,51 @@
 Player: [[yo!|hey!]], you alright there?
 Jeff: Alright i am, for Jeff is I.
 Jeff: predictable your future is, i shall.
-if e.finishminigame1 and e.finishminigame2 and e.talkedmayor and e.talkedpenguin:
-	if e.sucess1 and not e.sucess2:
+if e.finishminigame1 and e.finishminigame2 and e.finishminigame3 and e.talkedmayor and e.talkedpenguin and e.talkedcat:
+	if e.sucess1 and not e.sucess2 and not e.sucess3:
 		Jeff: Coins you desire, quests you try.
-		Jeff: 2 quests you have tried, yet only one successful.
+		Jeff: 3 quests you have tried, yet only one successful.
 		Jeff: your mission is doomed to fail.
 		Jeff: However, i wonder if something else could be more important.
 		Jeff: Perhaps, it was the friends you made along the way.
-	if e.sucess2 and not e.sucess1:
+	if e.sucess2 and not e.sucess1 and not e.sucess3:
 		Jeff: Coins you desire, quests you try.
-		Jeff: 2 quests you have tried, yet only one successful.
+		Jeff: 3 quests you have tried, yet only one successful.
 		Jeff: your mission is doomed to fail.
 		Jeff: However, i wonder if something else could be more important.
 		Jeff: Perhaps, it was the friends you made along the way.
-	if e.sucess2 and e.sucess1:
+	if e.sucess3 and not e.sucess1 and not e.sucess2:
 		Jeff: Coins you desire, quests you try.
-		Jeff: 2 quests you have tried, both successful.
+		Jeff: 3 quests you have tried, yet only one successful.
+		Jeff: your mission is doomed to fail.
+		Jeff: However, i wonder if something else could be more important.
+		Jeff: Perhaps, it was the friends you made along the way.
+	if e.sucess2 and e.sucess1 and e.sucess3:
+		Jeff: Coins you desire, quests you try.
+		Jeff: 3 quests you have tried, all successful.
 		Jeff: your mission has been successful.
 		Jeff: What will you do now?
 		Jeff: i wonder if something else could be more important than your original mission.
 		Jeff: Perhaps, it was the friends you made along the way.
-	if not e.sucess2 and not e.sucess1:
+	if not e.sucess2 and not e.sucess1 and not e.sucess3:
 		Jeff: Coins you desire, quests you try.
-		Jeff: 2 quests you have tried, both failed.
+		Jeff: 3 quests you have tried, all failed.
 		Jeff: your mission is doomed to fail.
+		Jeff: However, i wonder if something else could be more important.
+		Jeff: Perhaps, it was the friends you made along the way.
+	if  e.sucess1 and e.sucess2 and not e.sucess3:
+		Jeff: Coins you desire, quests you try.
+		Jeff: 3 quests you have tried, 2 successes.
+		Jeff: However, i wonder if something else could be more important.
+		Jeff: Perhaps, it was the friends you made along the way.
+	if  e.sucess1 and e.sucess3 and not e.sucess2:
+		Jeff: Coins you desire, quests you try.
+		Jeff: 3 quests you have tried, 2 successes.
+		Jeff: However, i wonder if something else could be more important.
+		Jeff: Perhaps, it was the friends you made along the way.
+	if  e.sucess2 and e.sucess3 and not e.sucess1:
+		Jeff: Coins you desire, quests you try.
+		Jeff: 3 quests you have tried, 2 successes.
 		Jeff: However, i wonder if something else could be more important.
 		Jeff: Perhaps, it was the friends you made along the way.
 elif:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cux114pp0g0su"]
+[gd_scene load_steps=11 format=4 uid="uid://cux114pp0g0su"]
 
 [ext_resource type="Texture2D" uid="uid://bnvr0cum5rl6f" path="res://assets/background-sky.jpeg" id="1_jfut0"]
 [ext_resource type="TileSet" uid="uid://mwd8sjp2ns30" path="res://villagetileset.tres" id="2_h2fc4"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://bgacmhphasny1" path="res://tree.tscn" id="6_706ud"]
 [ext_resource type="PackedScene" uid="uid://i0xcymmn28nm" path="res://log.tscn" id="7_ed2cd"]
 [ext_resource type="PackedScene" uid="uid://8ap34hq5bbv4" path="res://character_body_2d.tscn" id="8_528ca"]
-[ext_resource type="PackedScene" uid="uid://cio7kth44jwlf" path="res://cat.tscn" id="10_oxfiw"]
 [ext_resource type="PackedScene" uid="uid://vii1l6k3pgea" path="res://cat2.tscn" id="11_j5vfl"]
 
 [node name="minigame1level2" type="Node2D"]
@@ -73,9 +72,6 @@ offset_bottom = -10.0
 theme_override_font_sizes/font_size = 20
 text = "You have 60 seconds left!
 Score: 0"
-
-[node name="Area2D3" parent="." instance=ExtResource("10_oxfiw")]
-position = Vector2(-1302, 468)
 
 [node name="Area2D4" parent="." instance=ExtResource("11_j5vfl")]
 position = Vector2(868, 157)

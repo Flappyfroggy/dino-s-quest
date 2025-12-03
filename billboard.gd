@@ -32,3 +32,5 @@ func _process(_delta):
 		finishminigame1screencanvas.hide()
 		e.f = false
 		e.shown1 = true
+	if e.finishminigame1 and e.finishminigame2 and e.finishminigame3:
+		canvaslayer.hide()

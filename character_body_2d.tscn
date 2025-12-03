@@ -41,3 +41,9 @@ size_flags_vertical = 3
 
 [node name="interacting component" parent="." instance=ExtResource("3_ghijl")]
 position = Vector2(4, -89)
+
+[node name="dino" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dino"]
+position = Vector2(-3.5, -13.5)
+shape = SubResource("RectangleShape2D_44cfe")
