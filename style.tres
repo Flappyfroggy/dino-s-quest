@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://bcxm4621arqyi"]
+
+[ext_resource type="FontFile" uid="uid://dq8ny253bylxn" path="res://assets/poco/Poco.ttf" id="1_jicpb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jicpb"]
+bg_color = Color(0.08524919, 0.3440144, 0.28588986, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4csd"]
+bg_color = Color(0.59549147, 0.75805634, 0.7528478, 1)
+
+[resource]
+Button/font_sizes/font_size = 25
+Button/fonts/font = ExtResource("1_jicpb")
+Button/styles/normal = SubResource("StyleBoxFlat_jicpb")
+Label/colors/font_color = Color(0, 0.053132005, 0.39220256, 1)
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("1_jicpb")
+Panel/styles/panel = SubResource("StyleBoxFlat_w4csd")

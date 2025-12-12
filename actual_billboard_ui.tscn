@@ -1,10 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://cv4363q8b1a06"]
+[gd_scene load_steps=8 format=3 uid="uid://cv4363q8b1a06"]
 
 [ext_resource type="Script" uid="uid://cr1n2uetsercr" path="res://quest1button.gd" id="1_836tq"]
+[ext_resource type="Theme" uid="uid://bcxm4621arqyi" path="res://style.tres" id="1_a8eg1"]
 [ext_resource type="Script" uid="uid://dolnpb4d7ldkg" path="res://quest2button.gd" id="2_g2d3h"]
 [ext_resource type="Script" uid="uid://cj4if5x7itocb" path="res://quest3button.gd" id="3_0upu3"]
 
-[sub_resource type="Theme" id="Theme_ghftd"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4csd"]
+bg_color = Color(0.5186013, 0.63577986, 0.5552219, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tbwq"]
+bg_color = Color(0.5186013, 0.63577986, 0.5552219, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jroh7"]
+bg_color = Color(0.5186013, 0.63577986, 0.5552219, 1)
 
 [node name="actual_billboardUI" type="Control"]
 layout_mode = 3
@@ -13,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_ghftd")
+theme = ExtResource("1_a8eg1")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -29,6 +37,7 @@ offset_right = 508.5
 offset_bottom = 273.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_a8eg1")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 5
@@ -39,6 +48,7 @@ offset_top = 51.0
 offset_right = 511.0
 offset_bottom = 147.0
 grow_horizontal = 2
+theme = ExtResource("1_a8eg1")
 
 [node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
@@ -51,21 +61,27 @@ offset_left = 99.0
 offset_top = 121.0
 offset_right = 256.0
 offset_bottom = 327.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_w4csd")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer"]
 offset_left = 98.0
-offset_top = 143.0
+offset_top = 122.0
 offset_right = 255.0
-offset_bottom = 342.0
+offset_bottom = 326.0
 
 [node name="Label" type="Label" parent="CanvasLayer/VBoxContainer2"]
 layout_mode = 2
+theme = ExtResource("1_a8eg1")
 theme_override_font_sizes/font_size = 25
 text = "Quest from the mayor: Rewards 10 coins"
+horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="CanvasLayer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+size_flags_vertical = 10
+theme = ExtResource("1_a8eg1")
 text = "Inspect Details"
 script = ExtResource("1_836tq")
 
@@ -74,20 +90,24 @@ offset_left = 361.0
 offset_top = 251.0
 offset_right = 518.0
 offset_bottom = 457.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6tbwq")
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer"]
-offset_left = 360.0
+offset_left = 359.0
 offset_top = 251.0
-offset_right = 521.0
-offset_bottom = 463.0
+offset_right = 519.0
+offset_bottom = 454.0
+theme = ExtResource("1_a8eg1")
 
 [node name="Label" type="Label" parent="CanvasLayer/VBoxContainer3"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Quest from Eric: 	Rewards 10 coins"
+horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="CanvasLayer/VBoxContainer3"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 10
 text = "Inspect Details"
@@ -98,21 +118,25 @@ offset_left = 684.0
 offset_top = 169.0
 offset_right = 841.0
 offset_bottom = 375.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jroh7")
 
 [node name="VBoxContainer4" type="VBoxContainer" parent="CanvasLayer"]
-offset_left = 690.0
+offset_left = 686.0
 offset_top = 164.0
 offset_right = 841.0
 offset_bottom = 373.0
+theme = ExtResource("1_a8eg1")
 
 [node name="Label" type="Label" parent="CanvasLayer/VBoxContainer4"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Quest from the cat:
 Rewards 10 coins"
+horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="CanvasLayer/VBoxContainer4"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 10
 text = "Inspect Details"

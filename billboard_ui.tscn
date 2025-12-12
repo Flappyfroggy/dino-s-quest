@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3wk32mmk2drg"]
+[gd_scene load_steps=4 format=3 uid="uid://b3wk32mmk2drg"]
 
 [ext_resource type="Script" uid="uid://dp5wj3bdf3sbc" path="res://exitbutton.gd" id="1_csjm6"]
 [ext_resource type="Script" uid="uid://cq386v21t8l0v" path="res://acceptquest1.gd" id="1_jmcgm"]
+[ext_resource type="Theme" uid="uid://bcxm4621arqyi" path="res://style.tres" id="1_wokrs"]
 
 [node name="QuestUI" type="Control"]
 layout_mode = 3
@@ -29,6 +30,7 @@ offset_right = 508.5
 offset_bottom = 273.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_wokrs")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = 7
@@ -42,6 +44,7 @@ offset_right = 507.0
 offset_bottom = -52.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("1_wokrs")
 
 [node name="acceptbutton" type="Button" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
@@ -65,6 +68,7 @@ offset_top = 51.0
 offset_right = 499.0
 offset_bottom = 484.00003
 grow_horizontal = 2
+theme = ExtResource("1_wokrs")
 
 [node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
