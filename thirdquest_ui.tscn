@@ -79,5 +79,5 @@ text = "Request: Help!"
 [node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-text = "Hi, um. i think i see zombies coming. You can probably just throw some daggers at them right? Please just hit atleast 10 of them without getting hit, click W to attack! You should probably move slowly, or let the zombies come to you."
+text = "Hi, um. i think i see zombies coming. You can probably just throw some daggers at them right? Please just hit atleast 10 of them without getting hit, click W to throw one right or Q to throw left! "
 autowrap_mode = 2

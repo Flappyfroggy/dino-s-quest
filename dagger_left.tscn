@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://nn0wt4cxpc1r"]
+
+[ext_resource type="Script" uid="uid://bd38prr5p8dcp" path="res://dagger_left.gd" id="1_a3rf0"]
+[ext_resource type="Texture2D" uid="uid://cmsexp46r8mu5" path="res://assets/pixil-frame-0.png" id="2_h8wyg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixfv2"]
+size = Vector2(248, 40)
+
+[node name="dagger_left" type="Area2D"]
+script = ExtResource("1_a3rf0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(100.5, 15.999988)
+scale = Vector2(5.0499997, 3.4400003)
+texture = ExtResource("2_h8wyg")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(199, -6)
+shape = SubResource("RectangleShape2D_ixfv2")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
