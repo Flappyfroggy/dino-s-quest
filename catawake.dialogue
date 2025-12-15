@@ -13,4 +13,5 @@ if e.finishminigame3 and not e.talkedcat:
 	set e.talkedcat = true
 if e.finishminigame3 and e.talkedcat:
 	I'm going to take a nap.
+set e.finish_dialogue = true
 => END

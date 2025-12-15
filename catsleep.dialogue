@@ -1,3 +1,4 @@
 ~ start
 Sleepy Cat: [[zzzZ|zzZzzZZzzz|zzZzZZzzZZZ]]
+set e.finish_dialogue = true
 => END

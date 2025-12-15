@@ -28,4 +28,5 @@ if e.finishminigame1 and not e.talkedmayor:
 if e.finishminigame1 and e.talkedmayor:
 	Mayor: Feel free to visit the rest of the village, especially Jeff on the left.
 	Mayor: Or drop by my house and have a nice coffee!
+set e.finish_dialogue = true
 => END

@@ -1,5 +1,5 @@
 extends Node2D
-@export var p_1: Vector2 = Vector2(619,259)
+@export var p_1: Vector2 = Vector2(1800,259)
 @export var p_2: Vector2 = Vector2(3500,500)
 @onready var spawntimer = $Timer
 @onready var zombie_instance = preload("res://zombie.tscn")

@@ -30,3 +30,6 @@ var spaceshootpoints = str(0)
 var spacepoint_int = int(0)
 var allowdagger: bool = false
 var zombiedeadcount = int(0)
+var finish_dialogue: bool = true
+func end():
+	get_tree().quit()

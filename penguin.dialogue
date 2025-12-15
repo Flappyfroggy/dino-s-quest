@@ -31,4 +31,5 @@ if e.finishminigame2 and not e.talkedpenguin:
 	set e.talkedpenguin = true
 if e.finishminigame2 and e.talkedpenguin:
 	Eric: Anyways, feel free to drop by any time!
+set e.finish_dialogue = true
 	=> END

@@ -4,5 +4,7 @@ func _ready():
 	interactable.interact = _on_interact
 
 func _on_interact():
-	DialogueManager.show_dialogue_balloon(load("res://mayor_dialogue.dialogue"), "start")
-	return
+	if e.finish_dialogue:
+		DialogueManager.show_dialogue_balloon(load("res://mayor_dialogue.dialogue"), "start")
+		e.finish_dialogue = false
+		return

@@ -49,8 +49,12 @@ if e.finishminigame1 and e.finishminigame2 and e.finishminigame3 and e.talkedmay
 		Jeff: 3 quests you have tried, 2 successes.
 		Jeff: However, i wonder if something else could be more important.
 		Jeff: Perhaps, it was the friends you made along the way.
+	Jeff: Your journey has finished. GAME ENDED
+	Unknown: Thanks for playing!
+	do e.end()
 elif:
 	Jeff: Coins you desire, quests you try.
 	Jeff: Perhaps it is time for you to pay a visit to the questboard, or perhaps the vilagers you have completed the quest for.
 	Jeff: Please, visit me after you attempt both.
+set e.finish_dialogue = true
 => END
