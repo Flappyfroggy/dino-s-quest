@@ -1,8 +1,44 @@
-[gd_scene load_steps=5 format=3 uid="uid://vii1l6k3pgea"]
+[gd_scene load_steps=10 format=3 uid="uid://vii1l6k3pgea"]
 
 [ext_resource type="Script" uid="uid://byb8jhsah5v7t" path="res://catsleep.gd" id="1_rb7fp"]
-[ext_resource type="Texture2D" uid="uid://dd77627u5bgq3" path="res://assets/cat sleep.PNG" id="2_jplhf"]
+[ext_resource type="Texture2D" uid="uid://cak1634cjcrgs" path="res://assets/cat.png" id="2_rb7fp"]
 [ext_resource type="PackedScene" uid="uid://dihbw88h6l4nj" path="res://interactablessss/interactables.tscn" id="3_esel8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jplhf"]
+atlas = ExtResource("2_rb7fp")
+region = Rect2(0, 0, 665, 552)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esel8"]
+atlas = ExtResource("2_rb7fp")
+region = Rect2(665, 0, 665, 552)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrp51"]
+atlas = ExtResource("2_rb7fp")
+region = Rect2(0, 552, 665, 552)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxgae"]
+atlas = ExtResource("2_rb7fp")
+region = Rect2(665, 552, 665, 552)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_73stm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jplhf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esel8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrp51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxgae")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2hdoq"]
 radius = 135.05925
@@ -10,10 +46,11 @@ radius = 135.05925
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_rb7fp")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1.9073486e-06, 0.9999995)
 scale = Vector2(0.3068776, 0.3105843)
-texture = ExtResource("2_jplhf")
+sprite_frames = SubResource("SpriteFrames_73stm")
+frame_progress = 0.51330924
 
 [node name="interactables" parent="." instance=ExtResource("3_esel8")]
 interact_name = "sleeping cat"

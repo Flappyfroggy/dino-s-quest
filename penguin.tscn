@@ -1,8 +1,51 @@
-[gd_scene load_steps=5 format=3 uid="uid://bief4gjph3txn"]
+[gd_scene load_steps=11 format=3 uid="uid://bief4gjph3txn"]
 
-[ext_resource type="Texture2D" uid="uid://co2px7lv5xyp6" path="res://assets/penguin.PNG" id="1_7j1qa"]
 [ext_resource type="Script" uid="uid://dvmm4bobap1cu" path="res://penguin.gd" id="1_yb3xo"]
+[ext_resource type="Texture2D" uid="uid://bme1cg74o18lc" path="res://assets/pengui.png" id="2_1jf55"]
 [ext_resource type="PackedScene" uid="uid://dihbw88h6l4nj" path="res://interactablessss/interactables.tscn" id="2_yb3xo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vg2t"]
+atlas = ExtResource("2_1jf55")
+region = Rect2(0, 0, 706, 875)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfq6v"]
+atlas = ExtResource("2_1jf55")
+region = Rect2(706, 0, 706, 875)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnmie"]
+atlas = ExtResource("2_1jf55")
+region = Rect2(1412, 0, 706, 875)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esxj0"]
+atlas = ExtResource("2_1jf55")
+region = Rect2(0, 875, 706, 875)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oaa38"]
+atlas = ExtResource("2_1jf55")
+region = Rect2(706, 875, 706, 875)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_30loc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vg2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfq6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnmie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esxj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oaa38")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1jf55"]
 radius = 126.01587
@@ -10,9 +53,11 @@ radius = 126.01587
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_yb3xo")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.07830001, 0.06880001)
-texture = ExtResource("1_7j1qa")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-6.000001, -5.499995)
+scale = Vector2(0.23229462, 0.184)
+sprite_frames = SubResource("SpriteFrames_30loc")
+frame_progress = 0.942735
 
 [node name="interactables" parent="." instance=ExtResource("2_yb3xo")]
 interact_name = "Eric"
