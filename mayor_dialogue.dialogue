@@ -10,7 +10,7 @@ if not e.finishminigame1:
 			Mayor: What's that i hear? You'll do it? Thankyou!
 			Mayor: Please, take a look at the quest i put up to your right.
 	- No, i am Sir Eeepo!
-		Mayor: Aww. => END
+		Mayor: Aww.
 if e.finishminigame1 and not e.talkedmayor:
 	Player: Hi, i completed your quest. 
 	Mayor: Really?! Lets see here...

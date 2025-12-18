@@ -1,0 +1,5 @@
+~ start
+Billboard: All quests finished. Talk to all relevant NPCs to continue
+Billboard: HINT: talk to the cat on the far left, mayor on the left and penguin on the right. After doing so, talk to Jeff on the left.
+set e.finish_dialogue = true
+=> END

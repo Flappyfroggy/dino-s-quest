@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dmmcybeb45mja"
+path="res://.godot/imported/billboard.dialogue-760a1c92e68e6af4f41799d963a55d4c.tres"
+
+[deps]
+
+source_file="res://billboard.dialogue"
+dest_files=["res://.godot/imported/billboard.dialogue-760a1c92e68e6af4f41799d963a55d4c.tres"]
+
+[params]
+
+defaults=true

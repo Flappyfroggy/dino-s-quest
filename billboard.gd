@@ -24,6 +24,10 @@ func _on_interact():
 		finishminigame1screencanvas = f.get_node("CanvasLayer")
 		finishminigame1screencanvas.show()
 		canvaslayer.hide()
+	if e.finishminigame1 and e.finishminigame2 and e.finishminigame3:
+		if e.finish_dialogue:
+			DialogueManager.show_dialogue_balloon(load("res://billboard.dialogue"), "start")
+			e.finish_dialogue = false
 func _process(_delta):
 	if e.n:
 		canvaslayer.hide()
