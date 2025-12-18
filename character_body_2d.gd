@@ -10,6 +10,7 @@ var right: bool = false
 @onready var leftdagger_scene = preload("res://dagger_left.tscn")
 @onready var animation = $Sprite2D
 @onready var transition = $Camera2D/AnimationPlayer
+@onready var death = $AudioStreamPlayer2
 func _physics_process(delta):
 	velocity.x = 0
 	if Input.is_action_pressed("right"):
@@ -28,6 +29,7 @@ func _physics_process(delta):
 	if notfloor >= 3:
 		position = initial_p
 		notfloor = 0
+		death.play()
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = e.jump
 	if  Input.is_action_just_pressed("attack") and e.allowdagger and right:
@@ -53,6 +55,9 @@ func _process(_float) -> void:
 	if not notcooldown and not started:
 		timer.start()
 		started = true
+	if e.playsound:
+		e.playsound = false
+		death.play()
 
 func _on_timer_timeout() -> void:
 	notcooldown = true

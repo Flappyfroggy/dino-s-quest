@@ -7,6 +7,7 @@ func _on_zombie_area_entered(area: Area2D) -> void:
 	if area.name == "dagger":
 		queue_free()
 		e.zombiedeadcount += 1
+		e.playsound = true
 	if area.name == "dino":
 		e.finishminigame3 = true
 		get_tree().change_scene_to_file("res://village.tscn")

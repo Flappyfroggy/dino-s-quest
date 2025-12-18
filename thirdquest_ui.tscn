@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://huxgf21x2yow"]
+[gd_scene load_steps=5 format=3 uid="uid://huxgf21x2yow"]
 
 [ext_resource type="Theme" uid="uid://bcxm4621arqyi" path="res://style.tres" id="1_68ued"]
-[ext_resource type="Script" uid="uid://cwrs0pcnlc10q" path="res://acceptbutton3.gd" id="1_ocxiy"]
 [ext_resource type="Script" uid="uid://dv31kr6kmup3n" path="res://exitbutton3.gd" id="2_68ued"]
+[ext_resource type="Script" uid="uid://bha6xfbvuvu84" path="res://thirdquest_ui.gd" id="2_ph1eh"]
+[ext_resource type="PackedScene" uid="uid://ebtdlf6h5fmi" path="res://transition2.tscn" id="4_217wg"]
 
 [node name="QuestUI" type="Control"]
 layout_mode = 3
@@ -16,6 +17,7 @@ offset_bottom = -52.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_68ued")
+script = ExtResource("2_ph1eh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -52,7 +54,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 text = "Accept Quest"
-script = ExtResource("1_ocxiy")
 
 [node name="exitbutton" type="Button" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
@@ -81,3 +82,8 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Hi, um. i think i see zombies coming. You can probably just throw some daggers at them right? Please just hit atleast 10 of them without getting hit, click W to throw one in whatever direction you're facing. Be careful!!!!"
 autowrap_mode = 2
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("4_217wg")]
+
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/acceptbutton" to="." method="_on_acceptbutton_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

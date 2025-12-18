@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ci3p27xgdiqw3"]
+[gd_scene load_steps=6 format=3 uid="uid://ci3p27xgdiqw3"]
 
 [ext_resource type="Script" uid="uid://bgloofslrlkyn" path="res://spaceship.gd" id="1_7g3nn"]
 [ext_resource type="Texture2D" uid="uid://x4yof7hkon3p" path="res://assets/player_b_l2.png" id="2_pmkdn"]
+[ext_resource type="AudioStream" uid="uid://dnislpdqkn6dr" path="res://assets/350986__cabled_mess__lose_c_01.wav" id="3_pmkdn"]
+[ext_resource type="AudioStream" uid="uid://bwmg0fd22kldv" path="res://assets/482652__joao_janz__bonus-points-1_2.wav" id="4_51qc7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_51qc7"]
 size = Vector2(90, 96)
@@ -23,5 +25,12 @@ shape = SubResource("RectangleShape2D_51qc7")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.2
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_pmkdn")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_51qc7")
+volume_db = 12.0
 
 [connection signal="area_entered" from="yay" to="." method="_on_area_2d_area_entered"]

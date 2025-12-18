@@ -1,5 +1,7 @@
 extends CharacterBody2D
 @onready var lasercd = $Timer
+@onready var lose_points = $AudioStreamPlayer
+@onready var gain = $AudioStreamPlayer2
 var left = 0
 var right = 1152
 func _ready():
@@ -27,5 +29,9 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.name == "eepy":
 		e.spacepoint_int -= int(300)
 		e.spaceshootpoints = str(e.spacepoint_int)
+		lose_points.play()
 func _process(float) -> void:
 	velocity.x = 0
+	if e.playsound:
+		e.playsound = false
+		gain.play()

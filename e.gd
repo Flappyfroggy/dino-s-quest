@@ -31,5 +31,6 @@ var spacepoint_int = int(0)
 var allowdagger: bool = false
 var zombiedeadcount = int(0)
 var finish_dialogue: bool = true
+var playsound: bool = false
 func end():
 	get_tree().quit()

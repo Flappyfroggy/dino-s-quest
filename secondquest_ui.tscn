@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://w3udasolh1oo"]
+[gd_scene load_steps=5 format=3 uid="uid://w3udasolh1oo"]
 
-[ext_resource type="Script" uid="uid://bq6mhyl0je5k3" path="res://acceptquest2.gd" id="1_bc7at"]
+[ext_resource type="Script" uid="uid://c0ehwb5qohra0" path="res://secondquest_ui.gd" id="1_nrrlv"]
 [ext_resource type="Script" uid="uid://bjqrs2o7r71i8" path="res://exit2ndquestui.gd" id="1_ntvlv"]
 [ext_resource type="Theme" uid="uid://bcxm4621arqyi" path="res://style.tres" id="1_ydwob"]
+[ext_resource type="PackedScene" uid="uid://ebtdlf6h5fmi" path="res://transition2.tscn" id="4_w7m5f"]
 
 [node name="QuestUI" type="Control"]
 layout_mode = 3
@@ -15,6 +16,7 @@ offset_right = -70.0
 offset_bottom = -52.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nrrlv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -51,7 +53,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 text = "Accept Quest"
-script = ExtResource("1_bc7at")
 
 [node name="exitbutton" type="Button" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
@@ -80,3 +81,8 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Hey! I just know my arcade machine is broken somehow. It's impossible to win! If you can beat it, i'll  give you some coins. Click W to attack  - Eric"
 autowrap_mode = 2
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("4_w7m5f")]
+
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/acceptbutton" to="." method="_on_acceptbutton_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
