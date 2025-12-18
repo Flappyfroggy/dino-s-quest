@@ -38,7 +38,7 @@ position = Vector2(697, 499)
 position = Vector2(-1685, 437)
 
 [node name="Area2D3" parent="." instance=ExtResource("8_2ydvt")]
-position = Vector2(-2404, 503)
+position = Vector2(-2296, 504)
 
 [node name="Area2D4" parent="." instance=ExtResource("10_bixrm")]
 position = Vector2(2440, 540)

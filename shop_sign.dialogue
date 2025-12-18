@@ -1,3 +1,7 @@
 ~ start
-Shop Sign: Shop closed for construction. Reopening to be announced at a later date.
+Shop Sign: Shop Open: Go in?
+- yes
+	do e.shop()
+- no
+set e.finish_dialogue = true
 => END

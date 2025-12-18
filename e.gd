@@ -32,5 +32,11 @@ var allowdagger: bool = false
 var zombiedeadcount = int(0)
 var finish_dialogue: bool = true
 var playsound: bool = false
+var set_pos := false
 func end():
 	get_tree().quit()
+func shop():
+	get_tree().change_scene_to_file("res://shop.tscn")
+func back():
+	get_tree().change_scene_to_file("res://village.tscn")
+	set_pos = true

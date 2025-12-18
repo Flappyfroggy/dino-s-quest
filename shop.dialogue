@@ -1,0 +1,12 @@
+~ start
+Player: Purchase a cake?
+- Yes (10 COINS)
+	if e.coins >= 10:
+		set e.coins -= 10
+		set e.speed += 100
+		Player: (Speed Increased)
+	elif e.coins < 10:
+		Player: not enough coins to buy.
+- No
+do e.back()
+=> END

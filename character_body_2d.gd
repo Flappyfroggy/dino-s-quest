@@ -36,6 +36,9 @@ func _physics_process(delta):
 		shoot()
 	if Input.is_action_just_pressed("attack") and e.allowdagger and not right:
 		shoot_left()
+	if e.set_pos:
+		position = Vector2(3088,324)
+		e.set_pos = false
 	move_and_slide()
 func _ready():
 	transition.play("new_animation")
