@@ -9,6 +9,7 @@ var right: bool = false
 @onready var dagger_scene = preload("res://dagger.tscn")
 @onready var leftdagger_scene = preload("res://dagger_left.tscn")
 @onready var animation = $Sprite2D
+@onready var transition = $Camera2D/AnimationPlayer
 func _physics_process(delta):
 	velocity.x = 0
 	if Input.is_action_pressed("right"):
@@ -35,9 +36,7 @@ func _physics_process(delta):
 		shoot_left()
 	move_and_slide()
 func _ready():
-	if not e.playerdialogue:
-		DialogueManager.show_dialogue_balloon(load("res://player.dialogue"), "start")
-		e.playerdialogue = true
+	transition.play("new_animation")
 func shoot():
 	if notcooldown:
 		var dagger = dagger_scene.instantiate()
@@ -57,3 +56,9 @@ func _process(_float) -> void:
 
 func _on_timer_timeout() -> void:
 	notcooldown = true
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if not e.playerdialogue:
+		DialogueManager.show_dialogue_balloon(load("res://player.dialogue"), "start")
+		e.playerdialogue = true

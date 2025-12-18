@@ -5,6 +5,7 @@ extends Node2D
 @onready var shiptimer
 @onready var points = $Label
 @onready var timelimit = $TIMELIMIT
+@onready var transition = $AnimationPlayer
 var enempyship_instance
 var existing_positions: Array = []
 func get_random_point_inside(p1: Vector2, p2: Vector2) -> Vector2:
@@ -20,6 +21,7 @@ func spawn():
 	existing_positions.append(pos)
 	return
 func _ready():
+	transition.play("new_animation")
 	shiptimer = get_node("Timer")
 	shiptimer.timeout.connect(self._on_timer_end)
 	timelimit.timeout.connect(self.timeout)

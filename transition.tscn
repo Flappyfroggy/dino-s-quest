@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbiq21nffqfu6"]
+
+[ext_resource type="Texture2D" uid="uid://bpvy3xc801s4s" path="res://assets/black-purple-bg.jpg" id="1_2gi1b"]
+
+[sub_resource type="Animation" id="Animation_pj2mc"]
+resource_name = "new_animation"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.16666667, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4r5tf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1ap01"]
+_data = {
+&"RESET": SubResource("Animation_4r5tf"),
+&"new_animation": SubResource("Animation_pj2mc")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_1ap01")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(28.999847, 18.999908)
+scale = Vector2(1.6572917, 1.5611112)
+texture = ExtResource("1_2gi1b")

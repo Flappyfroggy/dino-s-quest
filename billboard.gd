@@ -3,6 +3,7 @@ extends Area2D
 @onready var interactable: Area2D = $interactables
 @onready var finishminigame1screen = preload("res://minigame1complete.tscn")
 
+
 var questui
 var canvaslayer
 var finishminigame1screencanvas

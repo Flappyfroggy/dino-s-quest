@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bope6rbev5b0k"]
+[gd_scene load_steps=7 format=3 uid="uid://bope6rbev5b0k"]
 
 [ext_resource type="Texture2D" uid="uid://bpvy3xc801s4s" path="res://assets/black-purple-bg.jpg" id="1_7nwrc"]
 [ext_resource type="Script" uid="uid://cjw2a78sjoyun" path="res://space_shooter.gd" id="1_fx8lw"]
 [ext_resource type="PackedScene" uid="uid://ci3p27xgdiqw3" path="res://spaceship.tscn" id="2_laudi"]
 [ext_resource type="PackedScene" uid="uid://drm051ucehdfr" path="res://enemyship.tscn" id="4_0vrwd"]
 [ext_resource type="AudioStream" uid="uid://du0iac53xrwwr" path="res://assets/Sketchbook 2024-10-23.ogg" id="5_fq2jq"]
+[ext_resource type="PackedScene" uid="uid://cbiq21nffqfu6" path="res://transition.tscn" id="6_4xewo"]
 
 [node name="space shooter" type="Node2D"]
 script = ExtResource("1_fx8lw")
@@ -41,3 +42,5 @@ one_shot = true
 stream = ExtResource("5_fq2jq")
 autoplay = true
 parameters/looping = true
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("6_4xewo")]
