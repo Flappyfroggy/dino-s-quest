@@ -10,6 +10,7 @@ func _on_button_pressed():
 		add_child(quest3)
 		canvasquest3 = quest3.get_node("CanvasLayer")
 		e.n = true
+		sfx.click_sfx()
 		#e.n hides the billboard page with the quests
 		# through the billboard code
 		pass

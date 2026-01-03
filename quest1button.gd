@@ -10,6 +10,7 @@ func _on_button_pressed():
 		add_child(quest1)
 		canvasquest1 = quest1.get_node("CanvasLayer")
 		e.n = true
+		sfx.click_sfx()
 	
 #following deletes the help the mayor request ui,
 #e.f is activated through the exit button on that page

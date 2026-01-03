@@ -4,3 +4,4 @@ func _ready():
 
 func _on_button_pressed():
 	e.closequest3 = true
+	sfx.click_sfx()

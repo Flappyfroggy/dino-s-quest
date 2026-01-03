@@ -1,4 +1,5 @@
 ~ start
+do npc.talk()
 [next=auto]
 if not e.finishminigame1:
 	Mayor: [[Hi|Hello|Howdy]], you're the new adventurer aren't you?
@@ -29,4 +30,5 @@ if e.finishminigame1 and e.talkedmayor:
 	Mayor: Feel free to visit the rest of the village, especially Jeff on the left.
 	Mayor: Or drop by my house and have a nice coffee!
 set e.finish_dialogue = true
+do npc._stop()
 => END

@@ -1,4 +1,5 @@
 ~ start
+do cat.talk()
 Cat: [[meow|mreoow|meeoww]], have you completed my quest? those zombies are pretty scary.
 if not e.finishminigame3:
 	Cat: Oh, you haven't, yet. that's okay.
@@ -14,4 +15,5 @@ if e.finishminigame3 and not e.talkedcat:
 if e.finishminigame3 and e.talkedcat:
 	I'm going to take a nap.
 set e.finish_dialogue = true
+do cat._stop()
 => END

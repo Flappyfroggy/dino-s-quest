@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg2ko6xgqf7rf"]
+
+[ext_resource type="AudioStream" uid="uid://bswo6385nivro" path="res://assets/730104__sadiquecat__cat-meowing-for-food-7.wav" id="1_23817"]
+[ext_resource type="Script" uid="uid://bblkr2044lden" path="res://cattalk.gd" id="2_unyar"]
+
+[node name="cattalk" type="AudioStreamPlayer"]
+stream = ExtResource("1_23817")
+volume_db = -3.0
+script = ExtResource("2_unyar")

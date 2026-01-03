@@ -1,4 +1,5 @@
 ~ start
+do npc.talk()
 Player: [[yo!|hey!]], you alright there?
 Jeff: Alright i am, for Jeff is I.
 Jeff: predictable your future is, i shall.
@@ -57,4 +58,5 @@ elif:
 	Jeff: Perhaps it is time for you to pay a visit to the questboard, or perhaps the vilagers you have completed the quest for.
 	Jeff: Please, visit me after you attempt both.
 set e.finish_dialogue = true
+do npc._stop()
 => END

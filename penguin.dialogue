@@ -1,4 +1,5 @@
 ~ start
+do npc.talk()
 if not e.finishminigame2:
 	Eric: [[Hola|Bonjour|Ciao]], I'm Eric!
 	- hello!
@@ -32,4 +33,5 @@ if e.finishminigame2 and not e.talkedpenguin:
 if e.finishminigame2 and e.talkedpenguin:
 	Eric: Anyways, feel free to drop by any time!
 set e.finish_dialogue = true
+do npc._stop()
 	=> END

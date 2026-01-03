@@ -1,4 +1,5 @@
 ~ start
+do npc.talk()
 Player: Purchase a cake?
 - Yes (10 COINS)
 	if e.coins >= 10:
@@ -9,4 +10,5 @@ Player: Purchase a cake?
 		Player: not enough coins to buy.
 - No
 do e.back()
+do npc._stop()
 => END

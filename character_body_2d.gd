@@ -5,22 +5,30 @@ var gravity = 2000.0
 var notcooldown
 var started
 var right: bool = false
+var is_walking_sound := false
 @onready var timer = $Timer
 @onready var dagger_scene = preload("res://dagger.tscn")
 @onready var leftdagger_scene = preload("res://dagger_left.tscn")
 @onready var animation = $Sprite2D
 @onready var transition = $Camera2D/AnimationPlayer
 @onready var death = $AudioStreamPlayer2
+@onready var walking = $walking
 func _physics_process(delta):
 	velocity.x = 0
 	if Input.is_action_pressed("right"):
 		velocity.x = e.speed
 		right = true
 		animation.play("walk_right")
+		if not is_walking_sound:
+			walking.play()
+			is_walking_sound = true
 	elif Input.is_action_pressed("left"):
 		velocity.x = -e.speed
 		right = false
 		animation.play("walk_left")
+		if not is_walking_sound:
+			walking.play()
+			is_walking_sound = true
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		notfloor += delta
@@ -70,3 +78,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if not e.playerdialogue:
 		DialogueManager.show_dialogue_balloon(load("res://player.dialogue"), "start")
 		e.playerdialogue = true
+
+
+func _on_walking_finished() -> void:
+	is_walking_sound = false

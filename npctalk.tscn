@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg37bh5kcmj5t"]
+
+[ext_resource type="AudioStream" uid="uid://buln7cfqqgf3s" path="res://assets/536967__dynamique__indistinct-deep-male-mumble.wav" id="1_0xhcb"]
+[ext_resource type="Script" uid="uid://ds738f65yqn28" path="res://npctalk.gd" id="2_ysmtm"]
+
+[node name="npctalk" type="AudioStreamPlayer"]
+stream = ExtResource("1_0xhcb")
+volume_db = 8.0
+script = ExtResource("2_ysmtm")
