@@ -1,8 +1,10 @@
 ~ start
+set e.finish_dialogue = false
 do npc.talk()
 [next=auto]
 Player: I'm so broke... how will i ever pay my loans off...
 Player: Oh, the adventurer's guild promised me they would pay me after i completed a few more quests, but so far.. nothing.
 Player: I guess i'll have to ask my new neighbours if they need any help..
 do npc._stop()
+set e.finish_dialogue = true
 => END

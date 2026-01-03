@@ -6,6 +6,8 @@ extends Node2D
 @onready var points = $Label
 @onready var timelimit = $TIMELIMIT
 @onready var transition = $AnimationPlayer
+@onready var t = $AnimationPlayer2
+@onready var s = $Sprite2D2
 var enempyship_instance
 var existing_positions: Array = []
 func get_random_point_inside(p1: Vector2, p2: Vector2) -> Vector2:
@@ -21,6 +23,7 @@ func spawn():
 	existing_positions.append(pos)
 	return
 func _ready():
+	s.hide()
 	transition.play("new_animation")
 	shiptimer = get_node("Timer")
 	shiptimer.timeout.connect(self._on_timer_end)
@@ -32,7 +35,8 @@ func _ready():
 func _on_timer_end():
 	e.shiptimero = true
 func timeout():
-	get_tree().change_scene_to_file("res://village.tscn")
+	s.show()
+	t.play("ee")
 	e.finishminigame2 = true
 func _physics_process(_delta):
 	if e.shiptimero:
@@ -47,3 +51,7 @@ func _physics_process(_delta):
 	var timeleft = timelimit.time_left
 	var timelefto = str(round(timeleft))
 	points.text = "Time = " + timelefto + " Points = " + e.spaceshootpoints
+
+
+func _on_animation_player_2_animation_finished(anim_name: StringName) -> void:
+	get_tree().change_scene_to_file("res://village.tscn")

@@ -1,12 +1,50 @@
-[gd_scene load_steps=8 format=3 uid="uid://bope6rbev5b0k"]
+[gd_scene load_steps=12 format=3 uid="uid://bope6rbev5b0k"]
 
 [ext_resource type="Texture2D" uid="uid://bpvy3xc801s4s" path="res://assets/black-purple-bg.jpg" id="1_7nwrc"]
 [ext_resource type="Script" uid="uid://cjw2a78sjoyun" path="res://space_shooter.gd" id="1_fx8lw"]
 [ext_resource type="PackedScene" uid="uid://ci3p27xgdiqw3" path="res://spaceship.tscn" id="2_laudi"]
 [ext_resource type="PackedScene" uid="uid://drm051ucehdfr" path="res://enemyship.tscn" id="4_0vrwd"]
 [ext_resource type="AudioStream" uid="uid://du0iac53xrwwr" path="res://assets/Sketchbook 2024-10-23.ogg" id="5_fq2jq"]
+[ext_resource type="FontFile" uid="uid://dq8ny253bylxn" path="res://assets/poco/Poco.ttf" id="5_koonh"]
 [ext_resource type="PackedScene" uid="uid://cbiq21nffqfu6" path="res://transition.tscn" id="6_4xewo"]
 [ext_resource type="PackedScene" uid="uid://cr615qaj3b54g" path="res://pause.tscn" id="7_vrrs8"]
+
+[sub_resource type="Animation" id="Animation_ey6ce"]
+resource_name = "ee"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qolja"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nn1fb"]
+_data = {
+&"RESET": SubResource("Animation_qolja"),
+&"ee": SubResource("Animation_ey6ce")
+}
 
 [node name="space shooter" type="Node2D"]
 script = ExtResource("1_fx8lw")
@@ -30,6 +68,7 @@ offset_left = 38.0
 offset_top = 32.0
 offset_right = 486.0
 offset_bottom = 109.0
+theme_override_fonts/font = ExtResource("5_koonh")
 theme_override_font_sizes/font_size = 27
 text = "Time left: 0 Points: 0 
 "
@@ -47,3 +86,16 @@ parameters/looping = true
 [node name="AnimationPlayer" parent="." instance=ExtResource("6_4xewo")]
 
 [node name="pause" parent="." instance=ExtResource("7_vrrs8")]
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nn1fb")
+}
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(31.500153, 51.49997)
+scale = Vector2(1.7182294, 1.5675926)
+texture = ExtResource("1_7nwrc")
+
+[connection signal="animation_finished" from="AnimationPlayer2" to="." method="_on_animation_player_2_animation_finished"]

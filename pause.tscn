@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cr615qaj3b54g"]
+[gd_scene load_steps=9 format=3 uid="uid://cr615qaj3b54g"]
 
 [ext_resource type="Script" uid="uid://dchlcmrri8cy3" path="res://pause.gd" id="1_6eyaj"]
 [ext_resource type="Theme" uid="uid://bcxm4621arqyi" path="res://style.tres" id="2_8u653"]
@@ -14,6 +14,10 @@ bg_color = Color(0.4386544, 0.6444038, 0.64265347, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u063c"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6eyaj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8u653"]
 
 [node name="pause" type="Control"]
 layout_mode = 3
@@ -59,6 +63,8 @@ grow_horizontal = 0
 theme_override_fonts/font = ExtResource("3_bwtow")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_u063c")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6eyaj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8u653")
 text = "PAUSE"
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

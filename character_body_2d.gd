@@ -18,14 +18,14 @@ func _physics_process(delta):
 		walking._stop()
 	if not e.paused:
 		velocity.x = 0
-	if Input.is_action_pressed("right") and not e.paused:
+	if Input.is_action_pressed("right") and not e.paused and e.finish_dialogue:
 		velocity.x = e.speed
 		right = true
 		animation.play("walk_right")
 		if not is_walking_sound:
 			walking.play()
 			is_walking_sound = true
-	elif Input.is_action_pressed("left") and not e.paused:
+	elif Input.is_action_pressed("left") and not e.paused and e.finish_dialogue:
 		velocity.x = -e.speed
 		right = false
 		animation.play("walk_left")
