@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://cr615qaj3b54g"]
+
+[ext_resource type="Script" uid="uid://dchlcmrri8cy3" path="res://pause.gd" id="1_6eyaj"]
+[ext_resource type="Theme" uid="uid://bcxm4621arqyi" path="res://style.tres" id="2_8u653"]
+[ext_resource type="FontFile" uid="uid://dq8ny253bylxn" path="res://assets/poco/Poco.ttf" id="3_bwtow"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jg8ls"]
+bg_color = Color(0.6758778, 0.7257141, 0.3905011, 1)
+corner_radius_top_left = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05lnj"]
+bg_color = Color(0.4386544, 0.6444038, 0.64265347, 1)
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u063c"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="pause" type="Control"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1.0
+grow_horizontal = 0
+script = ExtResource("1_6eyaj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -256.0
+offset_right = -124.0
+offset_bottom = 74.0
+grow_horizontal = 0
+theme = ExtResource("2_8u653")
+theme_override_styles/panel = SubResource("StyleBoxFlat_jg8ls")
+
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -124.0
+offset_bottom = 74.0
+grow_horizontal = 0
+theme = ExtResource("2_8u653")
+theme_override_styles/panel = SubResource("StyleBoxFlat_05lnj")
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -215.0
+offset_top = -27.0
+offset_right = -32.0
+offset_bottom = 65.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("3_bwtow")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_u063c")
+text = "PAUSE"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

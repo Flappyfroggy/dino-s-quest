@@ -1,15 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://g2k6kqptbmk7"]
+[gd_scene load_steps=6 format=3 uid="uid://g2k6kqptbmk7"]
 
 [ext_resource type="Texture2D" uid="uid://sd2qw5l6gvy0" path="res://assets/tree_bg.png" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://pfjwvtkt87di" path="res://main_menu.gd" id="1_fu7sn"]
 [ext_resource type="Theme" uid="uid://bcxm4621arqyi" path="res://style.tres" id="2_7vrkn"]
 [ext_resource type="PackedScene" uid="uid://ebtdlf6h5fmi" path="res://transition2.tscn" id="4_jix8l"]
+[ext_resource type="Texture2D" uid="uid://c2q0aegyutivu" path="res://assets/main_menu.png" id="5_glbon"]
 
 [node name="main_menu" type="Node2D"]
 script = ExtResource("1_fu7sn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(599, 228.5)
+position = Vector2(596, 278)
 scale = Vector2(0.50079995, 0.39414412)
 texture = ExtResource("1_06t4h")
 
@@ -23,6 +24,11 @@ theme_override_font_sizes/font_size = 50
 text = "start"
 
 [node name="AnimationPlayer" parent="." instance=ExtResource("4_jix8l")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(593.75, 242.68748)
+scale = Vector2(0.2718, 0.25825)
+texture = ExtResource("5_glbon")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

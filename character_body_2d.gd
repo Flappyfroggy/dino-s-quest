@@ -14,35 +14,38 @@ var is_walking_sound := false
 @onready var death = $AudioStreamPlayer2
 @onready var walking = $walking
 func _physics_process(delta):
-	velocity.x = 0
-	if Input.is_action_pressed("right"):
+	if e.paused:
+		walking._stop()
+	if not e.paused:
+		velocity.x = 0
+	if Input.is_action_pressed("right") and not e.paused:
 		velocity.x = e.speed
 		right = true
 		animation.play("walk_right")
 		if not is_walking_sound:
 			walking.play()
 			is_walking_sound = true
-	elif Input.is_action_pressed("left"):
+	elif Input.is_action_pressed("left") and not e.paused:
 		velocity.x = -e.speed
 		right = false
 		animation.play("walk_left")
 		if not is_walking_sound:
 			walking.play()
 			is_walking_sound = true
-	if not is_on_floor():
+	if not is_on_floor() and not e.paused:
 		velocity.y += gravity * delta
 		notfloor += delta
 	if is_on_floor():
 		notfloor = 0.0
-	if notfloor >= 3:
+	if notfloor >= 3 and not e.paused:
 		position = initial_p
 		notfloor = 0
 		death.play()
-	if Input.is_action_pressed("jump") and is_on_floor():
+	if Input.is_action_pressed("jump") and is_on_floor() and not e.paused:
 		velocity.y = e.jump
-	if  Input.is_action_just_pressed("attack") and e.allowdagger and right:
+	if  Input.is_action_just_pressed("attack") and e.allowdagger and right and not e.paused:
 		shoot()
-	if Input.is_action_just_pressed("attack") and e.allowdagger and not right:
+	if Input.is_action_just_pressed("attack") and e.allowdagger and not right and not e.paused:
 		shoot_left()
 	if e.set_pos:
 		position = Vector2(3088,324)

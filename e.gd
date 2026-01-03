@@ -34,6 +34,18 @@ var zombiedeadcount = int(0)
 var finish_dialogue: bool = true
 var playsound: bool = false
 var set_pos := false
+var paused := false
+var pausemenu_added := false
+var music_started := true
+func _process(_float):
+	if paused:
+		npc._stop()
+		cat._stop()
+		music._stop()
+		music_started = false
+	if not paused and not music_started:
+		music._play()
+		music_started = true
 func end():
 	get_tree().quit()
 func shop():

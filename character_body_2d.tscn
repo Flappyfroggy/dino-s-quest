@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://8ap34hq5bbv4"]
+[gd_scene load_steps=24 format=3 uid="uid://8ap34hq5bbv4"]
 
 [ext_resource type="Script" uid="uid://cgvp0cqejsslv" path="res://character_body_2d.gd" id="1_ij6vw"]
 [ext_resource type="Texture2D" uid="uid://dqrtjc3k6ywgd" path="res://assets/Untitled_Artwork.png" id="2_lhvu3"]
@@ -6,8 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://b40yq2xqi06rp" path="res://coins.tscn" id="3_44cfe"]
 [ext_resource type="PackedScene" uid="uid://confhjrouux3o" path="res://interactablessss/interacting_component.tscn" id="3_ghijl"]
 [ext_resource type="PackedScene" uid="uid://cbiq21nffqfu6" path="res://transition.tscn" id="5_4sjlk"]
+[ext_resource type="PackedScene" uid="uid://cr615qaj3b54g" path="res://pause.tscn" id="6_6ct3r"]
 [ext_resource type="AudioStream" uid="uid://cvvw1ka7i46an" path="res://assets/395654__soundsforhim__walking-barefoot-on-wooden-deck.mp3" id="8_6ct3r"]
 [ext_resource type="AudioStream" uid="uid://c2y1n2w710688" path="res://assets/555412__tonsil5__zombie-death-1.wav" id="8_qp52p"]
+[ext_resource type="Script" uid="uid://bknjqwccwkgkc" path="res://walking.gd" id="10_1kp85"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qp52p"]
 atlas = ExtResource("2_lhvu3")
@@ -114,6 +116,7 @@ position = Vector2(1, -25)
 shape = SubResource("CapsuleShape2D_lhvu3")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 limit_left = -3292
 limit_top = -414
 limit_right = 3677
@@ -134,6 +137,11 @@ size_flags_vertical = 3
 
 [node name="AnimationPlayer" parent="Camera2D" instance=ExtResource("5_4sjlk")]
 
+[node name="pause" parent="Camera2D" instance=ExtResource("6_6ct3r")]
+offset_left = 0.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
 [node name="interacting component" parent="." instance=ExtResource("3_ghijl")]
 position = Vector2(4, -89)
 
@@ -151,6 +159,7 @@ stream = ExtResource("8_qp52p")
 [node name="walking" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_6ct3r")
 volume_db = 12.404
+script = ExtResource("10_1kp85")
 
 [connection signal="animation_finished" from="Camera2D/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
