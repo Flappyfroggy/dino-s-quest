@@ -11,8 +11,6 @@ corner_radius_bottom_left = 50
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05lnj"]
 bg_color = Color(0.4386544, 0.6444038, 0.64265347, 1)
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u063c"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -33,7 +31,7 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -256.0
-offset_right = -124.0
+offset_right = -122.0
 offset_bottom = 74.0
 grow_horizontal = 0
 theme = ExtResource("2_8u653")

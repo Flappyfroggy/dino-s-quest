@@ -8,3 +8,4 @@ func _on_interact():
 	e.game1actualscore = str(e.game1score)
 	e.l = true
 	queue_free()
+	sfx.click_sfx()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b40yq2xqi06rp"]
+[gd_scene load_steps=4 format=3 uid="uid://b40yq2xqi06rp"]
 
 [ext_resource type="Script" uid="uid://dlmcubkqueftp" path="res://coins.gd" id="1_665jj"]
 [ext_resource type="Texture2D" uid="uid://xbjhkb6mjlii" path="res://assets/IMG_2439.PNG" id="2_88f8t"]
+[ext_resource type="FontFile" uid="uid://dq8ny253bylxn" path="res://assets/poco/Poco.ttf" id="2_jhvp1"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -32,6 +33,8 @@ texture = ExtResource("2_88f8t")
 [node name="Label" type="Label" parent="CanvasLayer/Panel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 10
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("2_jhvp1")
+theme_override_font_sizes/font_size = 60
 text = "0"
+vertical_alignment = 1
 script = ExtResource("1_665jj")

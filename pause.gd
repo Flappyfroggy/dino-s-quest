@@ -5,3 +5,4 @@ func _on_button_pressed() -> void:
 		var pause_menu = pause_menu_preload.instantiate()
 		add_child(pause_menu)
 		e.pausemenu_added = true
+		sfx.click_sfx()

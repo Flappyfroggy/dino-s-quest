@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://confhjrouux3o"]
+[gd_scene load_steps=4 format=3 uid="uid://confhjrouux3o"]
 
 [ext_resource type="Script" uid="uid://bwpmegxanh4uv" path="res://interactablessss/interacting_component.gd" id="1_7e3br"]
+[ext_resource type="FontFile" uid="uid://dq8ny253bylxn" path="res://assets/poco/Poco.ttf" id="2_oadg2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xwouj"]
 
@@ -27,6 +28,7 @@ offset_right = 47.5
 offset_bottom = -37.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_oadg2")
 theme_override_font_sizes/font_size = 44
 text = "e to interact"
 

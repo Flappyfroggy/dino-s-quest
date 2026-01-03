@@ -1,15 +1,54 @@
-[gd_scene load_steps=11 format=4 uid="uid://bcpqdsybh0pc2"]
+[gd_scene load_steps=16 format=4 uid="uid://bcpqdsybh0pc2"]
 
 [ext_resource type="Texture2D" uid="uid://bnvr0cum5rl6f" path="res://assets/background-sky.jpeg" id="1_0hvi2"]
 [ext_resource type="TileSet" uid="uid://mwd8sjp2ns30" path="res://villagetileset.tres" id="2_r6gmb"]
 [ext_resource type="PackedScene" uid="uid://8ap34hq5bbv4" path="res://character_body_2d.tscn" id="3_wh6qq"]
+[ext_resource type="Texture2D" uid="uid://bpvy3xc801s4s" path="res://assets/black-purple-bg.jpg" id="4_5v7aa"]
 [ext_resource type="Script" uid="uid://becrycwbkbxwu" path="res://60sectimer.gd" id="4_r6gmb"]
 [ext_resource type="PackedScene" uid="uid://ckvuf4pkp0g0o" path="res://wood_log.tscn" id="5_wh6qq"]
 [ext_resource type="PackedScene" uid="uid://ckufcdsvgdamv" path="res://tree_interact.tscn" id="6_or1ld"]
 [ext_resource type="PackedScene" uid="uid://cdms3l6vcjmvr" path="res://bricks.tscn" id="7_vlki2"]
 [ext_resource type="PackedScene" uid="uid://bgacmhphasny1" path="res://tree.tscn" id="8_ighjx"]
 [ext_resource type="PackedScene" uid="uid://i0xcymmn28nm" path="res://log.tscn" id="9_261h4"]
+[ext_resource type="FontFile" uid="uid://dq8ny253bylxn" path="res://assets/poco/Poco.ttf" id="10_261h4"]
 [ext_resource type="PackedScene" uid="uid://vii1l6k3pgea" path="res://cat2.tscn" id="10_ighjx"]
+
+[sub_resource type="Animation" id="Animation_j85fr"]
+resource_name = "new_animation"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("o_o:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bhu7q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("o_o:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ext1o"]
+_data = {
+&"RESET": SubResource("Animation_bhu7q"),
+&"new_animation": SubResource("Animation_j85fr")
+}
 
 [node name="minigame1" type="Node2D"]
 
@@ -27,6 +66,17 @@ wait_time = 30.0
 one_shot = true
 autostart = true
 script = ExtResource("4_r6gmb")
+
+[node name="o_o" type="Sprite2D" parent="Timer"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(174.49988, 69.49997)
+scale = Vector2(3.0984373, 2.2638888)
+texture = ExtResource("4_5v7aa")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Timer"]
+libraries = {
+&"": SubResource("AnimationLibrary_ext1o")
+}
 
 [node name="Timer2" type="Timer" parent="."]
 one_shot = true
@@ -69,9 +119,12 @@ offset_left = -190.0
 offset_top = -201.0
 offset_right = 258.0
 offset_bottom = -12.0
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("10_261h4")
+theme_override_font_sizes/font_size = 40
 text = "You have 60 seconds left!
 Score: 0"
 
 [node name="Area2D3" parent="." instance=ExtResource("10_ighjx")]
 position = Vector2(549, 47)
+
+[connection signal="animation_finished" from="Timer/AnimationPlayer" to="Timer" method="_on_animation_player_animation_finished"]
